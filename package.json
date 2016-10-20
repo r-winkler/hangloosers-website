@@ -1,0 +1,39 @@
+{
+  "name": "hangloosers-website",
+  "version": "1.0.0",
+  "description": "website for hangloosers",
+  "main": "js/index.js",
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "prebuild": "npm run clean",
+    "build": "webpack -p",
+    "start": "webpack-dev-server",
+    "prebabel": "npm run clean",
+    "babel": "babel js -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r-winkler/hangloosers-website.git"
+  },
+  "author": "'René Winkler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/r-winkler/hangloosers-website/issues"
+  },
+  "homepage": "https://github.com/r-winkler/hangloosers-website#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-latest": "^6.16.0",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "rimraf": "^2.5.4",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2"
+  }
+}
