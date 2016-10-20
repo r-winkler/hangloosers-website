@@ -3,7 +3,7 @@ var webpack = require('webpack');
 
 module.exports = {
     context: path.resolve('js'),
-    entry: './index.js',
+    entry: './app.js',
     output: {
         path: path.resolve('dist/'),
         publicPath: '/public/assets/',
@@ -39,6 +39,12 @@ module.exports = {
                     test: /\.(png|jpg|ttf|eot)/,
                     exclude: /node_modules/,
                     loader: 'url-loader?limit=10000'
+                },
+                { loader: 'raw', test: /\.(css|html)$/ },
+                {
+                    test: /\.(eot|svg|ttf|woff|woff2)$/,
+                    exclude: /node_modules/,
+                    loader: 'file?name=public/fonts/[name].[ext]'
                 }
              ]
      }
