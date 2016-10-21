@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="../css/app.css" rel="stylesheet" />
 </head>
 <body>  
-    <header>
+    <header id="top">
         <nav class="navbar navbar-inverse navbar-fixed-top cbp-af-header">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -25,11 +26,12 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
                       <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#club">Club</a></li>
+                          <li><a href="#top">Home</a></li>
+                          <li><a href="#club">Club</a></li>
                           <li><a href="#vorstand">Vorstand</a></li>
                           <li><a href="#events">Events</a></li>
                           <li><a href="#gallery">Gallery</a></li>
-                          <li><a href="#contact">Contact Us</a></li>
+                          <li><a href="#contact-us">Contact Us</a></li>
                       </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -37,62 +39,71 @@
     </header>
     
     <div class="container-fluid">
-        <div class="row">
-            <img class="img-responsive" src="../img/IMG_1982.JPG" />
-        </div>
+        <section class="row title-row">
+            <!-- TODO: darken this image-->
+            <div class="fill-screen stellar-bg"
+                 style="background-image: url(../img/IMG_1982.JPG)"
+                 data-stellar-background-ratio="0.2">
+                
+                <img class="img-responsive title-logo" src="../img/logo-title.png" alt="Hangloosers logo" />
+                
+                <div class="down-button">
+                    <a class="btn" href="#club">
+                        <i class="fa fa-arrow-circle-down fa-4x"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="club" class="row club-content">
+            <div><h1>CLUB</h1></div>
+            <div class="col-md-6">              
+                <p>Vor geraumer Zeit, genauer im Jahr 2008 traf sich immer wieder dieselbe „Flugverrückte“ Piloten-Fraktion aus der Region Thun, um ihr damals noch junges Fliegerleben mit neuen Eindrücken, den sogenannten „WOW-Effekten“, zu bereichern... Bei manchen Adventures wie Hike and Fly, SIK, Akro und XC-Flügen trafen wir immer wieder sehr sympathische Persönlichkeiten, die fortan auch mit uns durch die Luft zogen….so vereinten wir uns im lauen Sommer 2008 als „HANG LOOSErs“, der Anfang einer langen Episode… ;)</p>  
+            </div>
+            <div class="col-md-6">
+                <p>Die HANG LOOSErs sind ein Haufen Flugverrückter, die wann immer es die Möglichkeit bietet, mit dem Gleitschirm in der Luft unterwegs sind. Sind wir gerade mal nicht in der Luft, treffen wir uns zum gemütlichen beisammen sein beim „Stamm“ oder nehmen an einigen der zahlreichen Aktivitäten teil. Wir wollen so die Freundschaft zwischen Gleitschirmflieger/innen pflegen, Erfahrungen austauschen und gemeinsame Flüge unternehmen.</p>  
+            </div>           
+        </section>
+        
+        <section class="row">
+            <div class="fill-screen fixed-attachment" style="background-image: url(../img/IMG_1982.JPG)" />
+        </section>
+        
+        <section id="vorstand" class="row content-filler"></section>
+        
+        <section class="row">
+            <div class="fill-screen fixed-attachment" style="background-image: url(../img/IMG_1982.JPG)" />
+        </section>
+        
+        <section id="events" class="row content-filler"></section>
+        
+        <section class="row">
+            <div class="fill-screen fixed-attachment" style="background-image: url(../img/IMG_1982.JPG)" />
+        </section>
+        
+        <section id="gallery" class="row content-filler"></section>
+        
+        <section class="row">
+            <div class="fill-screen fixed-attachment" style="background-image: url(../img/IMG_1982.JPG)" />
+        </section>
+        
+        <section id="contact-us" class="row contact-us">
+            <h1>CONTACT US</h1>
+            <h3>Somewhere in Thun</h3>
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Lorem ipsum dolor sit amet</p>
+        </section>
     </div>
-    
-    <h1>This is the webpage of hangloosers</h1>
-    <p>The best paragliding club in the wonderful bernese oberland.</p>
-    
-    <p>
-        <span class="glyphicon glyphicon-bell"></span>
-    </p>
-    
-    <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Dropdown
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-    
-    <p>some text...</p>
-    
-    
-     <h1>test</h1>
-     <h1>test</h1>
-     <h1>test</h1>
-    <h1>test</h1>
-     <h1>test</h1>
-     <h1>test</h1>
-     <h1>test</h1>
-     <h1>test</h1>
-     <h1>test</h1>
-    <h1>test</h1>
-     <h1>test</h1>
-     <h1>test</h1>
-     <h1>test</h1>
-     <h1>test</h1>
-     <h1>test</h1>
-    <h1>test</h1>
-     <h1>test</h1>
-     <h1>test</h1>
-     <h1>test</h1>
-     <h1>test</h1>
-     <h1>test</h1>
     
     <footer class="container-fluid"></footer>
     
-    <script src="../node_modules/jquery/dist/jquery.js"></script>  
+    <script src="../node_modules/jquery/dist/jquery.js"></script> 
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="../js/libs/classie.js"></script>
     <script src="../js/libs/cbpAnimatedHeader.js"></script>
+    <script src="../js/libs/jquery.easing.1.3.js"></script>
+    <script src="../js/libs/jquery.stellar.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 </html>
