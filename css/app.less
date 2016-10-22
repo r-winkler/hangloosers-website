@@ -130,6 +130,15 @@ body {
     }
 }
 
+@media (max-width: 430px) {
+    #vorstand {
+        margin: 10px 0px;
+        p {
+            padding: 10px 10px;
+        }
+    }
+}
+
 @carousel-image-width: 275px;
 @carousel-image-height: 200px;
 
@@ -139,10 +148,10 @@ body {
     margin-bottom: 100px;
 }
 
-// show image-carousel only on on screen if it is not touchsreen and large width
-@showImageCarousel: ~"(pointer: fine) and (min-width: 1024px)";
+@notTouchscreen: ~"(pointer: fine)";
 
-@media @showImageCarousel {
+// show image-carousel only on on screen if it is not touchsreen and large width
+@media @notTouchscreen and (min-width: 1025px) {
     .image-carousel-wrapper {
         display: block;       
     } 
@@ -167,10 +176,14 @@ body {
     }
 }
 
-
-
-.vorstand-content-wrapper-touch {
+.vorstand-wrapper {
+    display: none;
     
+}
+@media (max-width: 1024px) {
+    .vorstand-wrapper {
+        display: block;       
+    } 
 }
 
 #events {
@@ -181,6 +194,15 @@ body {
     }
     p {
         .content-p;
+    }
+}
+
+@media (max-width: 430px) {
+    #events {
+        margin: 10px 0px;
+        p {
+            padding: 10px 10px;
+        }
     }
 }
 
@@ -195,9 +217,27 @@ body {
     }
 }
 
+@media (max-width: 430px) {
+    #gallery {
+        margin: 10px 0px;
+        p {
+            padding: 10px 10px;
+        }
+    }
+}
+
 #contact-us {
     margin: 50px;
     text-align: center;
+}
+
+@media (max-width: 430px) {
+    #contact-us {
+        margin: 10px 0px;
+        p {
+            padding: 10px 10px;
+        }
+    }
 }
 
 footer {
