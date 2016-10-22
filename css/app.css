@@ -111,15 +111,15 @@ body {
   width: 100%;
   margin-bottom: 100px;
 }
-.image-carousel {
-  width: 825px;
-  margin: 0 auto;
-  overflow: hidden;
-}
 @media (pointer: fine) and (min-width: 1024px) {
   .image-carousel-wrapper {
     display: block;
   }
+}
+.image-carousel {
+  width: 825px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 .image-carousel div {
   float: left;

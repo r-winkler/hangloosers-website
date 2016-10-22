@@ -33,8 +33,10 @@ body {
     }
 }
 
-.navbar-inverse .navbar-nav > li > a {
+.navbar-inverse {
+    .navbar-nav > li > a {
     color: navbar-textcolor;
+    }
 }
 
 .cbp-af-header-shrink {
@@ -111,10 +113,9 @@ body {
 @media (max-width: 430px) {
     #club {
         margin: 10px 0px;
-    }
-    
-    #club p {
-    padding: 10px 10px;
+        p {
+            padding: 10px 10px;
+        }
     }
 }
 
@@ -129,19 +130,13 @@ body {
     }
 }
 
+@carousel-image-width: 275px;
+@carousel-image-height: 200px;
+
 .image-carousel-wrapper {
     display: none;
     width: 100%;
     margin-bottom: 100px;
-}
-
-@carousel-image-width: 275px;
-@carousel-image-height: 200px;
-
-.image-carousel {   
-	width: 3*@carousel-image-width;
-    margin: 0 auto;
-	overflow: hidden;
 }
 
 // show image-carousel only on on screen if it is not touchsreen and large width
@@ -153,20 +148,26 @@ body {
     } 
 }
 
-.image-carousel div {	
-	float: left;
-	width: carousel-image-width; 
-	height: carousel-image-height; 
+.image-carousel {
+    width: 3 * @carousel-image-width;
+    margin: 0 auto;
+	overflow: hidden;
+    div {	
+        float: left;
+        width: carousel-image-width; 
+        height: carousel-image-height;
+    }
+    span {
+        float: left;
+        width: 100%;
+        height: 100%;
+        padding: 40px 30px 0 30px;
+        background-color: black;
+        color: @carousel-textcolor;		
+    }
 }
 
-.image-carousel span {
-    float: left;
-	width: 100%;
-	height: 100%;
-	padding: 40px 30px 0 30px;
-	background-color: black;
-	color: @carousel-textcolor;		
-}
+
 
 .vorstand-content-wrapper-touch {
     
