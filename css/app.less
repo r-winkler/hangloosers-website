@@ -140,9 +140,9 @@ body {
 }
 
 // show image-carousel only on on screen if it is not touchsreen and large width
-@showImageCarousel: "(pointer: fine) and (min-width: 1024px)";
+@showImageCarousel: ~"(pointer: fine) and (min-width: 1024px)";
 
-@media (pointer: fine) and (min-width: 1024px) {
+@media @showImageCarousel {
     .image-carousel-wrapper {
         display: block;       
     } 
