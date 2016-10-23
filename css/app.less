@@ -1,9 +1,45 @@
+/*** Colors ***/
+
 @body-bgcolor: #eee;
 @navbar-textcolor: #bbb;
 @carousel-textcolor: #ccc;
 @footer-bgcolor: #333;
 @footer-textcolor: #ddd;
 @down-button-color: yellow;
+
+/*** Variables ***/
+
+@small-margins-max-width: ~"(max-width: 650px)";
+@show-image-carousel-min-width: ~"(min-width: 1025px)";
+@carousel-image-width: 275px;
+@carousel-image-height: 200px;
+@notTouchscreen: ~"(pointer: fine)";
+
+/*** Mixins ***/
+
+.small-layout {
+    margin: 10px 0px;   
+        p {
+            font-size: 1em;
+            padding: 10px 10px;
+        }
+}
+
+.content {
+    margin: 120px 40px;
+}
+
+.content-h1 {
+    font-size: 44px;
+    text-align: center;
+}
+
+.content-p {
+    font-size: 18px;
+    padding: 20px 50px;
+}
+
+/*** Main ***/
 
 body {
     position: relative;
@@ -28,7 +64,7 @@ body {
             top: 0;
             bottom: 0;
             margin: auto;
-            width: 70%;
+            width: 60%;
         }
     }
 }
@@ -85,21 +121,6 @@ body {
     }
 }
 
-.content {
-    margin: 120px 40px;
-}
-
-.content-h1 {
-    font-size: 44px;
-    text-align: center;
-}
-
-.content-p {
-    font-size: 18px;
-    padding: 20px 50px;
-}
-
-
 #club {
     .content;
     h1 {
@@ -110,12 +131,9 @@ body {
     }
 }
 
-@media (max-width: 430px) {
+@media @small-margins-max-width {
     #club {
-        margin: 10px 0px;
-        p {
-            padding: 10px 10px;
-        }
+        .small-layout;
     }
 }
 
@@ -130,17 +148,11 @@ body {
     }
 }
 
-@media (max-width: 430px) {
+@media @small-margins-max-width {
     #vorstand {
-        margin: 10px 0px;
-        p {
-            padding: 10px 10px;
-        }
+        .small-layout;
     }
 }
-
-@carousel-image-width: 275px;
-@carousel-image-height: 200px;
 
 .image-carousel-wrapper {
     display: none;
@@ -148,10 +160,8 @@ body {
     margin-bottom: 100px;
 }
 
-@notTouchscreen: ~"(pointer: fine)";
-
 // show image-carousel only on on screen if it is not touchsreen and large width
-@media @notTouchscreen and (min-width: 1025px) {
+@media @notTouchscreen and @show-image-carousel-min-width {
     .image-carousel-wrapper {
         display: block;       
     } 
@@ -178,13 +188,18 @@ body {
 
 .vorstand-wrapper {
     display: none;
+    img {
+        margin: 0 auto;
+    }
     
 }
-@media (max-width: 1024px) {
+
+@media not all and @show-image-carousel-min-width {
     .vorstand-wrapper {
         display: block;       
     } 
 }
+
 
 #events {
     .content;
@@ -197,12 +212,9 @@ body {
     }
 }
 
-@media (max-width: 430px) {
+@media @small-margins-max-width {
     #events {
-        margin: 10px 0px;
-        p {
-            padding: 10px 10px;
-        }
+        .small-layout;
     }
 }
 
@@ -217,12 +229,9 @@ body {
     }
 }
 
-@media (max-width: 430px) {
+@media @small-margins-max-width {
     #gallery {
-        margin: 10px 0px;
-        p {
-            padding: 10px 10px;
-        }
+        .small-layout;
     }
 }
 
@@ -233,10 +242,7 @@ body {
 
 @media (max-width: 430px) {
     #contact-us {
-        margin: 10px 0px;
-        p {
-            padding: 10px 10px;
-        }
+        .small-layout;
     }
 }
 
