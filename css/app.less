@@ -1,10 +1,8 @@
 /*** Colors ***/
 
 @body-bgcolor: #eee;
-@navbar-textcolor: #bbb;
-@carousel-textcolor: #ccc;
+@main-textcolor: #bbb;
 @footer-bgcolor: #333;
-@footer-textcolor: #ddd;
 @down-button-color: yellow;
 
 /*** Variables ***/
@@ -13,7 +11,7 @@
 @show-image-carousel-min-width: ~"(min-width: 1025px)";
 @carousel-image-width: 275px;
 @carousel-image-height: 200px;
-@notTouchscreen: ~"(pointer: fine)";
+@no-touchscreen: ~"(pointer: fine)";
 
 /*** Mixins ***/
 
@@ -162,7 +160,7 @@ body {
 }
 
 // show image-carousel only on on screen if it is not touchsreen and large width
-@media @notTouchscreen and @show-image-carousel-min-width {
+@media @no-touchscreen and @show-image-carousel-min-width {
     .image-carousel-wrapper {
         display: block;       
     } 
@@ -183,7 +181,7 @@ body {
         height: 100%;
         padding: 40px 30px 0 30px;
         background-color: black;
-        color: @carousel-textcolor;		
+        color: @main-textcolor;		
     }
 }
 
@@ -259,7 +257,7 @@ body {
 
 footer {
     background-color: @footer-bgcolor;
-    color: @footer-textcolor;
+    color: @main-textcolor;
     padding: 20px;
     text-align: center;
 }
