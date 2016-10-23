@@ -1,19 +1,23 @@
-stellar benötigt version jquery 2.2.4 damit es funktioniert. mit einer 3er verison werden exceptiones geworfen.
+# General
 
-beachte auch issue von stellar: https://github.com/markdalgleish/stellar.js/issues/89
+This is the website of Hangloosers.
 
-zwei zeilen 435,436 müssen wie im Kommentar ersetzt werden.
+# Setup project
 
-# effects
+npm install
+
+# Effects
 
 * animated header
 * smooth scrolling
 * scrollspy
 * parallalx scrolling
+* carousel: http://coolcarousels.frebsite.nl/c/7/
 
-http://coolcarousels.frebsite.nl/c/7/
+# Hacks
 
-# setup project
+stellar benötigt version jquery 2.2.4 damit es funktioniert. mit einer 3er verison werden exceptiones geworfen.
 
-npm install
-use node or git bash to generate modernizr.js: node ./bin/modernizr -c lib/config-all.json
+beachte auch issue von stellar: https://github.com/markdalgleish/stellar.js/issues/89
+
+zwei zeilen 435,436 müssen wie im Kommentar ersetzt werden.
