@@ -7,7 +7,7 @@
 
 /*** Variables ***/
 
-@small-margins-max-width: ~"(max-width: 650px)";
+@small-margins-max-width: ~"(max-width: 767px)"; // Extra small devices (phones, less than 768px)
 @show-image-carousel-min-width: ~"(min-width: 1025px)";
 @carousel-image-width: 275px;
 @carousel-image-height: 200px;
@@ -25,6 +25,9 @@
 
 .content {
     margin: 120px 40px;
+    img {
+        margin: 0 auto;
+    }
 }
 
 .content-h1 {
@@ -244,15 +247,32 @@ body {
     }
 }
 
-#contact-us {
-    margin: 50px;
+#contact-us {    
+    .content;
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0;
+    h1 {
+       .content-h1;
+    }
+    p {
+        .content-p;
+    }  
+    .we-want-you {      
+        position: relative;
+        top: -100px;    
+    }
 }
+ 
 
-@media (max-width: 430px) {
+@media @small-margins-max-width {
     #contact-us {
         .small-layout;
+        .we-want-you {
+            position: static;
+        }
     }
+
 }
 
 footer {
@@ -260,4 +280,8 @@ footer {
     color: @main-textcolor;
     padding: 20px;
     text-align: center;
+}
+
+.social-buttons {
+    margin-bottom: 30px;
 }
