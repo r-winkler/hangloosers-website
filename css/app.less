@@ -151,8 +151,9 @@ body {
 @media @small-margins-max-width {
     #vorstand {
         .small-layout;
-    }
+    }    
 }
+
 
 .image-carousel-wrapper {
     display: none;
@@ -191,7 +192,17 @@ body {
     img {
         margin: 0 auto;
     }
-    
+    p {
+        margin-bottom: 100px;
+    }
+}
+
+@media @small-margins-max-width {
+    .vorstand-wrapper {
+        p {
+            margin-bottom: 20px;
+        }
+    }    
 }
 
 @media not all and @show-image-carousel-min-width {
