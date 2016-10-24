@@ -24,11 +24,25 @@ $(function() {
     });
     
     // parallax scrolling with stellar.js
-    $(window).stellar();
+    $(window).stellar();   
     
 });
 
-// vorstand carousel
+// toggle "Read more..." text
+$(document).ready(function(){
+    $('#read-more').click(function() { 
+        var readmore = 'Read more...';
+        var readless = 'Read less...';
+        if ($(this).text() === readmore) {
+            $(this).text(readless);
+        }
+        else {
+            $(this).text(readmore);
+        }
+    });
+});
+
+// Vorstand carousel
 $(function() {
 	$('.image-carousel > div').each(function() {
 		var $cfs = $(this);
