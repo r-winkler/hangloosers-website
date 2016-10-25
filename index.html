@@ -91,7 +91,9 @@
         
         <section id="vorstand" class="row">       
             <h1>VORSTAND</h1> 
-            <div class="image-carousel-wrapper">
+            
+            <!-- only visible in layout lg -->
+            <div class="image-carousel-wrapper visible-lg-block">
                 <div class="image-carousel">
                     <div>
                         <img src="img/car1.jpg" alt="car1" class="img-responsive"/>
@@ -120,7 +122,8 @@
                 </div>
             </div>  
             
-            <div id="carousel-vorstand-xs" class="carousel slide" data-ride="carousel" data-interval="">
+            <!-- only visible in layout xs -->
+            <div id="carousel-vorstand-xs" class="carousel slide visible-xs-block" data-ride="carousel" data-interval="">
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
@@ -175,10 +178,8 @@
                 </a>
             </div>
             
-            
-            
-<!--
-            <div class="vorstand-wrapper">
+            <!-- only visible in layout sm and md -->          
+            <div class="vorstand-wrapper visible-sm-block visible-md-block">
                 <div class="row">
                     <div class="col-sm-6">                              
                         <img src="img/car1.jpg" alt="car1" class="img-responsive"/>
@@ -228,7 +229,7 @@
                     </div>
                 </div>
             </div>
--->
+
         </section>
         
         <section class="row">
