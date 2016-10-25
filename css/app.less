@@ -2,7 +2,7 @@
 
 @body-bgcolor: #eee;
 @main-textcolor: #bbb;
-@footer-bgcolor: #333;
+@light-black: #333;
 @down-button-color: yellow;
 @carousel-bgcolor: black;
 
@@ -199,7 +199,7 @@ body {
 }
 
 .item {
-    background-color: black; 
+    background-color: @light-black; 
     padding-top: 30px;
 }
 
@@ -219,11 +219,11 @@ body {
     }
 }
 
-@media not all and @show-image-carousel-min-width {
+/*@media not all and @show-image-carousel-min-width {
     .vorstand-wrapper {
         display: block;       
     } 
-}
+}*/
 
 
 #events {
@@ -288,7 +288,7 @@ body {
 }
 
 footer {
-    background-color: @footer-bgcolor;
+    background-color: @light-black;
     color: @main-textcolor;
     padding: 20px;
     text-align: center;
