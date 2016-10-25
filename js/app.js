@@ -29,7 +29,17 @@ $(function() {
 });
 
 // toggle "Read more..." text
-$(document).ready(function(){
+$(document).ready(function() {
+    
+    // close navbar on click
+    $(function() { 
+        var navMain = $("#navbar-main");
+        navMain.on("click", "a", null, function () {
+            navMain.collapse('hide');
+        });
+    });
+    
+    // switch text on click
     $('#read-more').click(function() { 
         var readmore = 'Read more...';
         var readless = 'Read less...';
