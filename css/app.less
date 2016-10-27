@@ -40,6 +40,17 @@
     padding: 20px 50px;
 }
 
+.scale(@scalesize) {
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(@scalesize);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(@scalesize);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(@scalesize);
+    transition: all 200ms ease-in;
+    transform: scale(@scalesize);
+}
+
 /*** Main ***/
 
 body {
@@ -100,7 +111,7 @@ body {
     min-height: 200px;
 }
 
-.title-logo {
+#title-logo {
     position: absolute;
     padding: 20px;
     top: 50%;
@@ -110,6 +121,7 @@ body {
     -webkit-transform: translate(-50%, -50%);
 }
 
+
 .down-button {
     position: absolute;
     bottom: 40px;
@@ -117,7 +129,11 @@ body {
     text-align: center;
     i {
         color: @down-button-color;
-    }
+    };
+    &:hover {
+        text-shadow: 0px 0px 150px #000000;
+        .scale(1.2);
+    };
 }
 
 .fixed-attachment {
