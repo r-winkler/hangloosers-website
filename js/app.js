@@ -28,8 +28,15 @@ $(function() {
     
 });
 
-// toggle "Read more..." text
+
 $(document).ready(function() {
+    
+    // set text bold of active nav item
+    $("#navbar-main").on("activate.bs.scrollspy", function(){
+        $(".nav li > a").css('font-weight', 'normal'); // reset all
+        $(".nav li.active > a").css('font-weight','bold');
+    });
+
     
     // close navbar on click
     $(function() { 
@@ -39,7 +46,7 @@ $(document).ready(function() {
         });
     });
     
-    // switch text on click
+    // toggle "Read more... text
     $('#read-more').click(function() { 
         var readmore = 'Read more...';
         var readless = 'Read less...';
