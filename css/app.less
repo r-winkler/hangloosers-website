@@ -72,7 +72,10 @@ body {
 
 .navbar-inverse {
     .navbar-nav > li > a {
-    color: navbar-textcolor;
+        color: @main-textcolor;
+    }
+    .navbar-nav > li > a:focus {
+        color: @main-textcolor;
     }
 }
 

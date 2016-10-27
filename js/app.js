@@ -28,8 +28,8 @@ $(function() {
     
 });
 
-
-$(document).ready(function() {
+// document ready function
+$(function() {
     
     // set text bold of active nav item
     $("#navbar-main").on("activate.bs.scrollspy", function(){
