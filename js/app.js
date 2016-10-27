@@ -61,7 +61,7 @@ $(document).ready(function() {
 
 // Vorstand carousel
 $(function() {
-	$('.image-carousel > div').each(function() {
+	$('.vorstand-lg-carousel > div').each(function() {
 		var $cfs = $(this);
 		$cfs.carouFredSel({
 			direction: 'up',
