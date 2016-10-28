@@ -17,10 +17,10 @@
 /*** Mixins ***/
 
 .xs-layout {
-    margin: 10px 0px;   
-        p {
-            padding: 10px 5px;
-        }
+    margin: 10px 0px;
+    p {
+        padding: 10px 5px;
+    }
 }
 
 .content {
@@ -44,12 +44,13 @@
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(@scalesize);
     -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(@scalesize);   
+    -ms-transform: scale(@scalesize);
     -moz-transition: all 200ms ease-in;
     -moz-transform: scale(@scalesize);
     transition: all 200ms ease-in;
     transform: scale(@scalesize);
 }
+
 
 /*** Main ***/
 
@@ -70,14 +71,12 @@ body {
     .navbar-header {
         position: relative;
     }
-    .navbar {
-        img {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            width: 60%;
-        }
+    .navbar img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 60%;
     }
 }
 
@@ -98,7 +97,7 @@ body {
 .cbp-af-header-shrink {
     padding-top: 0px;
     padding-bottom: 0px;
-    opacity: 0.9;      
+    opacity: 0.9;
 }
 
 .fill-screen {
@@ -121,7 +120,6 @@ body {
     -webkit-transform: translate(-50%, -50%);
 }
 
-
 .down-button {
     position: absolute;
     bottom: 40px;
@@ -129,11 +127,11 @@ body {
     text-align: center;
     i {
         color: @down-button-color;
-    };
+    }
     &:hover {
         text-shadow: 0px 0px 150px #000000;
         .scale(1.2);
-    };
+    }
 }
 
 .fixed-attachment {
@@ -147,12 +145,12 @@ body {
 }
 
 #club {
-    .content;
+    .content();
     h1 {
-        .content-h1;
+        .content-h1();
     }
     p {
-        .content-p;
+        .content-p();
     }
 }
 
@@ -168,27 +166,26 @@ body {
 
 @media @xs-layout {
     #club {
-        .xs-layout;
+        .xs-layout();
     }
 }
 
 #vorstand {
-    .content;
+    .content();
     h1 {
-       .content-h1;
-        margin-bottom: 50px; 
+        .content-h1();
+        margin-bottom: 50px;
     }
     p {
-        .content-p;
+        .content-p();
     }
 }
 
 @media @xs-layout {
     #vorstand {
-        .xs-layout;
-    }    
+        .xs-layout();
+    }
 }
-
 
 .vorstand-lg-carousel-wrapper {
     display: none;
@@ -199,17 +196,16 @@ body {
 // show image-carousel only on on screen if it is not touchsreen and large width
 //@media @no-touchscreen and @lg-layout {
 //    .image-carousel-wrapper {
-//        display: block;       
-//    } 
+//        display: block;
+//    }
 //}
-
 .vorstand-lg-carousel {
     width: 3 * @carousel-image-width;
     margin: 0 auto;
-	overflow: hidden;
-    div {	
+    overflow: hidden;
+    div {
         float: left;
-        width: @carousel-image-width; 
+        width: @carousel-image-width;
         height: @carousel-image-height;
     }
     span {
@@ -218,12 +214,12 @@ body {
         height: 100%;
         padding: 40px 30px 0 30px;
         background-color: @vorstand-lg-carousel-bgcolor;
-        color: @main-textcolor;		
+        color: @main-textcolor;
     }
 }
 
 .item {
-    background-color: @light-black; 
+    background-color: @light-black;
     padding-top: 30px;
 }
 
@@ -243,72 +239,70 @@ body {
     }
 }
 
-/*@media not all and @lg-layout {
-    .vorstand-wrapper {
-        display: block;       
-    } 
-}*/
 
+/*@media not all and @lg-layout {
+ .vorstand-wrapper {
+ display: block;
+ }
+ }*/
 
 #events {
-    .content;
+    .content();
     h1 {
-       .content-h1;
-        margin-bottom: 50px; 
+        .content-h1();
+        margin-bottom: 50px;
     }
     p {
-        .content-p;
+        .content-p();
     }
 }
 
 @media @xs-layout {
     #events {
-        .xs-layout;
+        .xs-layout();
     }
 }
 
 #gallery {
-    .content;
+    .content();
     h1 {
-       .content-h1;
-        margin-bottom: 50px; 
+        .content-h1();
+        margin-bottom: 50px;
     }
     p {
-        .content-p;
+        .content-p();
     }
 }
 
 @media @xs-layout {
     #gallery {
-        .xs-layout;
+        .xs-layout();
     }
 }
 
-#contact-us {    
-    .content;
+#contact-us {
+    .content();
     text-align: center;
     margin-bottom: 0;
     h1 {
-       .content-h1;
+        .content-h1();
     }
     p {
-        .content-p;
-    }  
-    .we-want-you {      
+        .content-p();
+    }
+    .we-want-you {
         position: relative;
-        top: -100px;    
+        top: -100px;
     }
 }
- 
 
 @media @xs-layout {
     #contact-us {
-        .xs-layout;
+        .xs-layout();
         .we-want-you {
             position: static;
         }
     }
-
 }
 
 footer {
