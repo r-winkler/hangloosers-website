@@ -31,10 +31,8 @@ $(function () {
 // document ready function
 $(function () {
 
-    $.get('../calendar.html')
-        .success(function (data) {
-            $('#year-calendar').html(data);
-        });
+    // load year calendar from separate file
+    $('#year-calendar').load('../calendar.html');
 
     // set text bold of active nav item
     $("#navbar-main").on("activate.bs.scrollspy", function () {
