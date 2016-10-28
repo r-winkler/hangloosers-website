@@ -32,7 +32,7 @@ $(function () {
 $(function () {
 
     // load year calendar from separate file
-    $('#year-calendar').load('../calendar.html');
+    $('#year-calendar').load('calendar.html');
 
     // set text bold of active nav item
     $("#navbar-main").on("activate.bs.scrollspy", function () {
