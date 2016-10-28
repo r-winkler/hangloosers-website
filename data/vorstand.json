@@ -1,0 +1,45 @@
+[
+    {
+        "function": "Präsident"
+        , "name": "Patric Megert"
+        , "description": "Clubgründer und Pilot aus Leidenschaft. Er ist für jeden Spass zu haben..."
+    }
+
+
+    
+    , {
+        "function": "Vize-Präsident"
+        , "name": "René Winkler"
+        , "description": "Enthusiastischer Pilot seit 2008. Verbringt soviel Zeit wie möglich in der Luft."
+    }
+
+
+    
+    , {
+        "function": "Sportchef"
+        , "name": "Raphael Nardin"
+        , "description": "lorum ipsum doret ispum"
+    }
+
+
+    
+    , {
+        "function": "Sekretär"
+        , "name": "Chrigel Schöll"
+        , "description": "lorum ipsum doret ispum"
+    }
+
+
+    
+    , {
+        "function": "Kassier"
+        , "name": "Mike Feller"
+        , "description": "Unser IOTA-Rookie pusht nach vorne :)"
+    }
+
+
+    
+    , {
+        "description": "Hier kommt der kurze Beschrieb des Vorstands hin..."
+    }
+]

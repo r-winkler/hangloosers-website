@@ -34,6 +34,41 @@ $(function () {
     // load year calendar from separate file
     $('#year-calendar').load('calendar.html');
 
+    // set content of vorstand
+    $.getJSON('data/vorstand.json', function (data) {
+        var items = [];
+        $.each(data, function (key, val) {
+            items.push(val);
+        });
+        var $president = $('.president');
+        $president.find('.title').html(data[0].function);
+        $president.find('.name').html(data[0].name);
+        $president.find('.description').html(data[0].description);
+
+        var $vize = $('.vize');
+        $vize.find('.title').html(data[1].function);
+        $vize.find('.name').html(data[1].name);
+        $vize.find('.description').html(data[1].description);
+
+        var $sportchef = $('.sportchef');
+        $sportchef.find('.title').html(data[2].function);
+        $sportchef.find('.name').html(data[2].name);
+        $sportchef.find('.description').html(data[2].description);
+
+        var $sekretaer = $('.sekretaer');
+        $sekretaer.find('.title').html(data[3].function);
+        $sekretaer.find('.name').html(data[3].name);
+        $sekretaer.find('.description').html(data[3].description);
+
+        var $kassier = $('.kassier');
+        $kassier.find('.title').html(data[4].function);
+        $kassier.find('.name').html(data[4].name);
+        $kassier.find('.description').html(data[4].description);
+
+        var $description = $('.description');
+        $description.find('.description').html(data[5].description);
+    });
+
     // set text bold of active nav item
     $("#navbar-main").on("activate.bs.scrollspy", function () {
         $(".nav li > a").css('font-weight', 'normal'); // reset all
