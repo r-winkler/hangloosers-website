@@ -135,12 +135,12 @@ body {
 }
 
 .fixed-attachment {
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
     .fixed-attachment {
-        background-attachment: scroll;
+        background-attachment: fixed;
     }
 }
 
@@ -200,13 +200,7 @@ body {
     margin-bottom: 100px;
 }
 
-// show image-carousel only on on screen if it is not touchsreen and large width
-//@media @no-touchscreen and @lg-layout {
-//    .image-carousel-wrapper {
-//        display: block;
-//    }
-//}
-.vorstand-lg-carousel {
+#vorstand-lg-carousel {
     width: 3 * @carousel-image-width;
     margin: 0 auto;
     overflow: hidden;
@@ -225,15 +219,12 @@ body {
     }
 }
 
-.item {
-    background-color: @light-black;
-    padding-top: 30px;
-}
-
-.carousel-caption {
-    position: relative;
-    left: auto;
-    right: auto;
+#vorstand-xs-carousel {
+    h4,
+    h5,
+    h6 {
+        text-align: center;
+    }
 }
 
 .vorstand-sm-md-layout {
@@ -241,13 +232,6 @@ body {
         margin-bottom: 20px ! important;
     }
 }
-
-
-/*@media not all and @lg-layout {
- .vorstand-wrapper {
- display: block;
- }
- }*/
 
 #events {
     .content();
