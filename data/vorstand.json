@@ -6,12 +6,16 @@
     }
 
 
+
     
     , {
         "function": "Vize-Präsident"
         , "name": "René Winkler"
         , "description": "Enthusiastischer Pilot seit 2008. Verbringt soviel Zeit wie möglich in der Luft."
     }
+
+
+
 
 
     
@@ -22,6 +26,9 @@
     }
 
 
+
+
+
     
     , {
         "function": "Sekretär"
@@ -30,12 +37,18 @@
     }
 
 
+
+
+
     
     , {
         "function": "Kassier"
         , "name": "Mike Feller"
         , "description": "Unser IOTA-Rookie pusht nach vorne :)"
     }
+
+
+
 
 
     

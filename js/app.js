@@ -95,6 +95,7 @@ $(function () {
         }
     });
 
+    // carousel im xs layout
     $('#vorstand-xs-carousel').slick({
         infinite: true
         , slidesToShow: 1
@@ -102,7 +103,7 @@ $(function () {
     });
 });
 
-// Vorstand carousel
+// carousel im lg layout
 $(function () {
     $('#vorstand-lg-carousel > div').each(function () {
         var $cfs = $(this);
