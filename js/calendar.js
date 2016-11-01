@@ -18,7 +18,8 @@ $(function () {
     });
 
     $('#calendar').calendar({
-        enableContextMenu: false
+        language: 'de'
+        , enableContextMenu: false
         , enableRangeSelection: true
         , contextMenuItems: []
         , selectRange: function (e) {}
