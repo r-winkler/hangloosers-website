@@ -130,6 +130,18 @@ $(function () {
         }
     });
 
+    // toggle "Show calendar... text
+    $('#show-calendar').click(function () {
+        var show = 'Show calendar...';
+        var hide = 'Hide calendar';
+        if ($(this).text() === show) {
+            $(this).text(hide);
+        }
+        else {
+            $(this).text(show);
+        }
+    });
+
     // carousel im xs layout
     $('#vorstand-xs-carousel').slick({
         infinite: true
