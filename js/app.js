@@ -36,10 +36,6 @@ $(function () {
 
     // set content of vorstand
     $.getJSON('data/vorstand.json', function (data) {
-        var items = [];
-        $.each(data, function (key, val) {
-            items.push(val);
-        });
         var $president = $('.president');
         $president.find('.title').html(data[0].function);
         $president.find('.name').html(data[0].name);
@@ -67,6 +63,45 @@ $(function () {
 
         var $description = $('.description');
         $description.find('.description').html(data[5].description);
+    });
+
+    // set content of upcoming-events
+    $.getJSON('data/events.json', function (data) {
+        var events = [];
+        $.each(data, function (key, val) {
+            events.push(val);
+        });
+
+        events.sort(function (a, b) {
+            a.date = new Date(a.startDate.substring(6, 10), a.startDate.substring(3, 5) - 1, a.startDate.substring(0, 2));
+            b.date = new Date(b.startDate.substring(6, 10), b.startDate.substring(3, 5) - 1, b.startDate.substring(0, 2));
+            return a.date - b.date;
+        });
+        var $first_event = $('#first-event');
+        $first_event.find('.event-name').html(events[0].name);
+        $first_event.find('.event-location').html(events[0].location);
+        $first_event.find('.event-date').html(events[0].startDate);
+
+        var $second_event = $('#second-event');
+        $second_event.find('.event-name').html(events[1].name);
+        $second_event.find('.event-location').html(events[1].location);
+        $second_event.find('.event-date').html(events[1].startDate);
+
+        var $third_event = $('#third-event');
+        $third_event.find('.event-name').html(events[2].name);
+        $third_event.find('.event-location').html(events[2].location);
+        $third_event.find('.event-date').html(events[2].startDate);
+
+        var $fourth_event = $('#fourth-event');
+        $fourth_event.find('.event-name').html(events[3].name);
+        $fourth_event.find('.event-location').html(events[3].location);
+        $fourth_event.find('.event-date').html(events[3].startDate);
+
+        var $fifth_event = $('#fifth-event');
+        $fifth_event.find('.event-name').html(events[4].name);
+        $fifth_event.find('.event-location').html(events[4].location);
+        $fifth_event.find('.event-date').html(events[4].startDate);
+
     });
 
     // set text bold of active nav item
@@ -100,6 +135,17 @@ $(function () {
         infinite: true
         , slidesToShow: 1
         , slidesToScroll: 1
+    });
+
+    // countdown
+    var dt = new Date();
+    $('#flipcountdownbox1').flipcountdown({
+        size: 'sm'
+        , beforeDateTime: '12/14/2016 00:00:00'
+    });
+    $('#flipcountdownbox2').flipcountdown({
+        size: 'sm'
+        , beforeDateTime: '1/01/' + (dt.getFullYear() + 1) + ' 00:00:01'
     });
 });
 

@@ -18,6 +18,7 @@
     <link href="node_modules/bootstrap-year-calendar/css/bootstrap-year-calendar.css" rel="stylesheet" />
     <link href="node_modules/slick-carousel/slick/slick.css" rel="stylesheet" />
     <link href="node_modules/slick-carousel/slick/slick-theme.css" rel="stylesheet" />
+    <link href="node_modules/flipcountdown/jquery.flipcountdown.css" rel="stylesheet" />
     <link href="css/app.less" rel="stylesheet/less" />
 
     <!-- Scripts -->
@@ -251,16 +252,68 @@
         </section>
 
         <section class="row">
-            <div class="fill-screen fixed-attachment" style="background-image: url(img/title.jpg)" />
+            <div class="fill-screen fixed-attachment" style="background-image: url(img/title1.jpg)" />
         </section>
 
         <section id="events">
             <h1>EVENTS</h1>
-            <div id="year-calendar"></div>
+            <div class="row"></div>
+            <div style="margin-top: 20px; text-align:center;" class="col-lg-3">
+                <img src="img/flags/kolumbien.jpg" class="img-responsive" />
+                <div id="flipcountdownbox1" style="margin-top: 10px"></div>
+                <h2>Rodanillo</h2>
+            </div>
+            <div style="margin-top: 20px; text-align:center;" class="col-lg-3">
+                <img src="img/flags/italien.png" class="img-responsive" />
+                <div id="flipcountdownbox2" style="margin-top: 10px"></div>
+                <h2>Bassano</h2>
+            </div>
+
+            <div class="col-lg-6">
+                <h3>Upcoming</h3>
+                <table id="upcoming-events" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Datum</th>
+                            <th>Event</th>
+                            <th>Ort</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="first-event">
+                            <td class="event-date"></td>
+                            <td class="event-name"></td>
+                            <td class="event-location"></td>
+                        </tr>
+                        <tr id="second-event">
+                            <td class="event-date"></td>
+                            <td class="event-name"></td>
+                            <td class="event-location"></td>
+                        </tr>
+                        <tr id="third-event">
+                            <td class="event-date"></td>
+                            <td class="event-name"></td>
+                            <td class="event-location"></td>
+                        </tr>
+                        <tr id="fourth-event">
+                            <td class="event-date"></td>
+                            <td class="event-name"></td>
+                            <td class="event-location"></td>
+                        </tr>
+                        <tr id="fifth-event">
+                            <td class="event-date"></td>
+                            <td class="event-name"></td>
+                            <td class="event-location"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row"></div>
+            <div id="year-calendar" style="margin-top:30px"></div>
         </section>
 
         <section class="row">
-            <div class="fill-screen fixed-attachment" style="background-image: url(img/title.jpg)" />
+            <div class="fill-screen fixed-attachment" style="background-image: url(img/title2.jpg)" />
         </section>
 
         <section id="gallery" class="row">
@@ -283,7 +336,7 @@
         </section>
 
         <section class="row">
-            <div class="fill-screen fixed-attachment" style="background-image: url(img/title.jpg)" />
+            <div class="fill-screen fixed-attachment" style="background-image: url(img/title3.jpg)" />
         </section>
 
         <section id="contact-us">
@@ -324,6 +377,7 @@
     <!-- put this lib at the end of body -->
     <script src="js/libs/cbpAnimatedHeader.js" type="text/javascript"></script>
     <script type="text/javascript" src="node_modules/slick-carousel/slick/slick.js" type="text/javascript"></script>
+    <script type="text/javascript" src="node_modules/flipcountdown/jquery.flipcountdown.js"></script>
 
 </body>
 
