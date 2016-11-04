@@ -11,6 +11,7 @@
 
 
 
+
     
     , {
         "function": "Vize-Präsident"
@@ -26,12 +27,14 @@
 
 
 
+
     
     , {
         "function": "Sportchef"
         , "name": "Raphael Nardin"
-        , "description": "IMMER irgendwo in der Luft, auch bei schelchtem Wetter :-)"
+        , "description": "IMMER irgendwo in der Luft, auch bei schlechtem Wetter :-)"
     }
+
 
 
 
@@ -56,12 +59,14 @@
 
 
 
+
     
     , {
         "function": "Kassier"
         , "name": "Mike Feller"
         , "description": "Unser IOTA-Rookie pusht nach vorne :)"
     }
+
 
 
 
