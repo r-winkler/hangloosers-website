@@ -12,12 +12,14 @@
 
 
 
+
     
     , {
         "function": "Vize-Präsident"
         , "name": "René Winkler"
         , "description": "Enthusiastischer Pilot seit 2008. Verbringt soviel Zeit wie möglich in der Luft."
     }
+
 
 
 
@@ -44,12 +46,14 @@
 
 
 
+
     
     , {
         "function": "Beisitz"
         , "name": "Chrigel Schöll"
         , "description": "Unser Oldie in der Truppe. Fliegt über 20 Jahren und hat immer der richtige Riecher."
     }
+
 
 
 
@@ -76,8 +80,9 @@
 
 
 
+
     
     , {
-        "description": "Der Vorstand besteht aus 5 Mitgliedern, die das Klubgeschen gestalten und mitbestimmen. Einmal jährlich trifft sich der Vorstand um neue Pläne für die kommende Saison zu schmieden."
+        "description": "Der Vorstand besteht aus 5 Mitgliedern, die das Klubgeschehen gestalten und mitbestimmen. Einmal jährlich trifft sich der Vorstand um neue Pläne für die kommende Saison zu schmieden."
     }
 ]
