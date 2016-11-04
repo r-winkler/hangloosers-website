@@ -21,8 +21,9 @@ stellar.js needs jquery 2.2.4 in order that it works properly. Newer versions of
 
 # How to
 
-## Facebook album
+## Integrate Facebook album
 
+```javascript
 <div id="fb-root"></div>
 <script>
 (function (d, s, id) {
@@ -35,5 +36,6 @@ stellar.js needs jquery 2.2.4 in order that it works properly. Newer versions of
 }(document, 'script', 'facebook-jssdk'));
 </script>
 <div class="fb-post col-md-3" data-href="https://www.facebook.com/media/set/?set=a.1714099655517991.1073741839.1591625684432056&type=1&l=ecc9889222"></div>
+```
 
-replace data-href with the link of the desired facebook album.
+Replace data-href with the link of the desired facebook album.
