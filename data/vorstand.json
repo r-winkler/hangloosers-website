@@ -7,6 +7,10 @@
 
 
 
+
+
+
+
     
     , {
         "function": "Vize-Präsident"
@@ -18,12 +22,20 @@
 
 
 
+
+
+
+
     
     , {
         "function": "Sportchef"
         , "name": "Raphael Nardin"
-        , "description": "lorum ipsum doret ispum"
+        , "description": "IMMER irgendwo in der Luft, auch bei schelchtem Wetter :-)"
     }
+
+
+
+
 
 
 
@@ -31,10 +43,14 @@
 
     
     , {
-        "function": "Sekretär"
+        "function": "Beisitz"
         , "name": "Chrigel Schöll"
-        , "description": "lorum ipsum doret ispum"
+        , "description": "Unser Oldie in der Truppe. Fliegt über 20 Jahren und hat immer der richtige Riecher."
     }
+
+
+
+
 
 
 
@@ -51,8 +67,12 @@
 
 
 
+
+
+
+
     
     , {
-        "description": "Hier kommt der kurze Beschrieb des Vorstands hin..."
+        "description": "Der Vorstand besteht aus 5 Mitgliedern, die das Klubgeschen gestalten und mitbestimmen. Einmal jährlich trifft sich der Vorstand um neue Pläne für die kommende Saison zu schmieden."
     }
 ]
