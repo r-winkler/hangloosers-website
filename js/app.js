@@ -159,6 +159,15 @@ $(function () {
         size: 'sm'
         , beforeDateTime: '1/01/' + (dt.getFullYear() + 1) + ' 00:00:01'
     });
+
+    // gallery
+    // This will create a single gallery from all elements that have class "gallery-item"
+    $('.gallery-item').magnificPopup({
+        type: 'image'
+        , gallery: {
+            enabled: true
+        }
+    });
 });
 
 // carousel im lg layout
