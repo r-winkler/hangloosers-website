@@ -1,35 +1,9 @@
 [
-    {
-        "name": "Rodanillo"
-        , "location": "Rodanillo, Columbia"
-        , "startDate": "14.12.2016"
-        , "endDate": "29.12.2016"
-     }
-
-
-
-    
-    , {
-        "name": "Speil und Spass"
-        , "location": "anywhere"
-        , "startDate": "27.11.2016"
-        , "endDate": "30.11.2016"
-     }
-
-    
-    , {
-        "name": "lorum ipsum doret"
-        , "location": "anywhere"
-        , "startDate": "27.11.2017"
-        , "endDate": "30.11.2017"
-     }
-
-    
-    , {
-        "name": "Streckenfliegen"
-        , "location": "anywhere"
-        , "startDate": "03.04.2017"
-        , "endDate": "03.04.2017"
+	{
+		"name": "Roldanillo"
+		, "location": "Roldanillo, Columbia"
+		, "startDate": "14.12.2016"
+		, "endDate": "29.12.2016"
      }
 
 
@@ -37,12 +11,148 @@
 
 
 
-    
-    , {
-        "name": "Vorstand Hangloosers"
-        , "location": "Schütze Opligen, 19Uhr"
-        , "startDate": "03.11.2016"
-        , "endDate": "03.11.2016"
+
+	
+	, {
+		"name": "New Year Event, Schlittel- und Fondueplausch"
+		, "location": "Grindelwald"
+		, "startDate": "07.01.2017"
+		, "endDate": "07.01.2017"
+     }
+
+
+
+
+
+	
+	, {
+		"name": "Skitag"
+		, "location": "je nach Schnee"
+		, "startDate": "11.02.2017"
+		, "endDate": "11.02.2017"
+     }
+
+
+
+
+
+	
+	, {
+		"name": "Alpensüdeseite Weekend"
+		, "location": "Tessin, Bassano oder Cavallaria"
+		, "startDate": "10.03.2017"
+		, "endDate": "12.03.2017"
+     }
+
+
+
+
+	
+	, {
+		"name": "Verschiebungsdatum (Alpensüdeseite Weekend)"
+		, "location": "Tessin, Bassano oder Cavallaria"
+		, "startDate": "17.03.2017"
+		, "endDate": "19.03.2017"
+     }
+
+
+	
+	, {
+		"name": "Hauptversammlung"
+		, "location": "noch offen"
+		, "startDate": "24.03.2017"
+		, "endDate": "24.03.2017"
+     }
+
+
+
+
+	
+	, {
+		"name": "Klubtreffen mit Thermikzipfeln"
+		, "location": "wo's fliegt"
+		, "startDate": "13.05.2017"
+		, "endDate": "14.05.2017"
+     }
+
+
+	
+	, {
+		"name": "gemeinsames Streckenfliegen"
+		, "location": "je nach Bedingungen"
+		, "startDate": "17.06.2017"
+		, "endDate": "18.06.2017"
+     }
+
+
+	
+	, {
+		"name": "gemeinsames Streckenfliegen"
+		, "location": "je nach Bedingungen"
+		, "startDate": "15.07.2017"
+		, "endDate": "16.07.2017"
+     }
+
+
+	
+	, {
+		"name": "gemeinsames Streckenfliegen"
+		, "location": "je nach Bedingungen"
+		, "startDate": "19.08.2017"
+		, "endDate": "20.08.2017"
+     }
+
+
+	
+	, {
+		"name": "Flugferien"
+		, "location": "Dolomiten, Algodonales oder St.André"
+		, "startDate": "16.09.2017"
+		, "endDate": "24.09.2017"
+     }
+
+
+	
+	, {
+		"name": "Hike&Fly"
+		, "location": "Allalinhorn oder je nach Bedingungen"
+		, "startDate": "07.10.2017"
+		, "endDate": "08.10.2017"
+     }
+
+
+	
+	, {
+		"name": "Verschiebdatum (Hike&Fly)"
+		, "location": "Allalinhorn oder je nach Bedingungen"
+		, "startDate": "14.10.2017"
+		, "endDate": "15.10.2017"
+     }
+
+
+	
+	, {
+		"name": "Europapark"
+		, "location": "Rust"
+		, "startDate": "24.10.2017"
+		, "endDate": "24.10.2017"
+     }
+
+
+
+
+
+
+
+
+
+
+	
+	, {
+		"name": "Vorstand Hangloosers"
+		, "location": "Löwe, Oberdiessbach, 19Uhr"
+		, "startDate": "03.11.2016"
+		, "endDate": "03.11.2016"
      }
 
 
