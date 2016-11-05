@@ -1,10 +1,13 @@
 [
 	{
-		"name": "Roldanillo"
+		"name": "Flugferien"
 		, "location": "Roldanillo, Columbia"
-		, "startDate": "14.12.2016"
-		, "endDate": "29.12.2016"
+		, "startDate": "13.12.2016"
+		, "endDate": "31.12.2016"
      }
+
+
+
 
 
 
@@ -24,6 +27,9 @@
 
 
 
+
+
+
 	
 	, {
 		"name": "Skitag"
@@ -31,6 +37,9 @@
 		, "startDate": "11.02.2017"
 		, "endDate": "11.02.2017"
      }
+
+
+
 
 
 
@@ -47,6 +56,9 @@
 
 
 
+
+
+
 	
 	, {
 		"name": "Verschiebungsdatum (Alpensüdeseite Weekend)"
@@ -54,6 +66,9 @@
 		, "startDate": "17.03.2017"
 		, "endDate": "19.03.2017"
      }
+
+
+
 
 
 	
@@ -67,6 +82,9 @@
 
 
 
+
+
+
 	
 	, {
 		"name": "Klubtreffen mit Thermikzipfeln"
@@ -74,6 +92,9 @@
 		, "startDate": "13.05.2017"
 		, "endDate": "14.05.2017"
      }
+
+
+
 
 
 	
@@ -85,6 +106,9 @@
      }
 
 
+
+
+
 	
 	, {
 		"name": "gemeinsames Streckenfliegen"
@@ -92,6 +116,9 @@
 		, "startDate": "15.07.2017"
 		, "endDate": "16.07.2017"
      }
+
+
+
 
 
 	
@@ -103,6 +130,9 @@
      }
 
 
+
+
+
 	
 	, {
 		"name": "Flugferien"
@@ -110,6 +140,9 @@
 		, "startDate": "16.09.2017"
 		, "endDate": "24.09.2017"
      }
+
+
+
 
 
 	
@@ -121,6 +154,9 @@
      }
 
 
+
+
+
 	
 	, {
 		"name": "Verschiebdatum (Hike&Fly)"
@@ -128,6 +164,9 @@
 		, "startDate": "14.10.2017"
 		, "endDate": "15.10.2017"
      }
+
+
+
 
 
 	
@@ -140,19 +179,21 @@
 
 
 
-
-
-
-
-
-
-
 	
 	, {
 		"name": "Vorstand Hangloosers"
 		, "location": "Löwe, Oberdiessbach, 19Uhr"
 		, "startDate": "03.11.2016"
 		, "endDate": "03.11.2016"
+     }
+
+
+	
+	, {
+		"name": "Vorstand Hangloosers"
+		, "location": "Schütze, Oppligen, 19Uhr"
+		, "startDate": "02.11.2017"
+		, "endDate": "02.11.2017"
      }
 
 

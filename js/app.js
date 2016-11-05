@@ -158,7 +158,7 @@ $(function () {
 	var dt = new Date();
 	$('#flipcountdownbox1').flipcountdown({
 		size: 'sm'
-		, beforeDateTime: '12/14/2016 00:00:00'
+		, beforeDateTime: '12/13/2016 12:00:00'
 	});
 	$('#flipcountdownbox2').flipcountdown({
 		size: 'sm'
