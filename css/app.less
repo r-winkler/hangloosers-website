@@ -325,6 +325,32 @@ body {
 	}
 }
 
+input:valid + .invalid
+/* Adjacent sybling selector */
+
+{
+	visibility: hidden;
+}
+
+input:invalid + invalid {
+	visibility: visible;
+}
+
+input:required {
+	border: 2px solid #900;
+}
+
+input:valid {
+	border: 2px solid #ccc;
+}
+
+.invalid {
+	margin-top: 0px;
+	margin-bottom: 4px;
+	font-size: 0.8em;
+	color: #666;
+}
+
 footer {
 	background-color: @light-black;
 	color: @main-textcolor;
