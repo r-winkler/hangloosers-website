@@ -72,11 +72,16 @@ $(function () {
 			events.push(val);
 		});
 
+		// sort events in ascending order
 		events.sort(function (a, b) {
-			a.date = new Date(a.startDate.substring(6, 10), a.startDate.substring(3, 5) - 1, a.startDate.substring(0, 2));
-			b.date = new Date(b.startDate.substring(6, 10), b.startDate.substring(3, 5) - 1, b.startDate.substring(0, 2));
-			return a.date - b.date;
+			a.startDateFormatted = new Date(a.startDate.substring(6, 10), a.startDate.substring(3, 5) - 1, a.startDate.substring(0, 2));
+			b.startDateFormatted = new Date(b.startDate.substring(6, 10), b.startDate.substring(3, 5) - 1, b.startDate.substring(0, 2));
+			return a.startDateFormatted - b.startDateFormatted;
 		});
+
+		// remove past events
+		events = events.filter(isInFuture);
+
 		var $first_event = $('#first-event');
 		$first_event.find('.event-name').html(events[0].name);
 		$first_event.find('.event-location').html(events[0].location);
@@ -169,6 +174,11 @@ $(function () {
 		}
 	});
 });
+
+function isInFuture(events) {
+	var today = new Date();
+	return events.startDateFormatted >= today;
+}
 
 // carousel im lg layout
 $(function () {
