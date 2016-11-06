@@ -279,6 +279,26 @@ body {
 	}
 }
 
+.flightslink {
+	display: none;
+}
+
+@media @xs-layout {
+	#fluege {
+		.xs-layout();
+	}
+	.flights {
+		display: none;
+	}
+	.flightslink {
+		display: block;
+		text-align: center;
+		font-weight: bold;
+		font-size: 1.5em;
+		margin-bottom: 100px;
+	}
+}
+
 #gallery {
 	.content();
 	h1 {

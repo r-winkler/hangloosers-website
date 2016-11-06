@@ -248,6 +248,27 @@ body {
   font-size: 18px;
   padding: 20px 50px;
 }
+.flightslink {
+  display: none;
+}
+@media (max-width: 767px) {
+  #fluege {
+    margin: 10px 0px;
+  }
+  #fluege p {
+    padding: 10px 5px;
+  }
+  .flights {
+    display: none;
+  }
+  .flightslink {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 100px;
+  }
+}
 #gallery {
   margin: 120px 40px;
 }
