@@ -28,32 +28,39 @@
 </head>
 <body>
 
-  <div class="row section">
-    <div class="container" id="title">
-      <div class="col-1-1">
-        <img src="./testformspree.com_files/logo.png" alt="" class="center">
-        <h1 class="center"><span class="caps">Formspree Test Area</span></h1>
-      </div>
-    </div>
-    <div class="container">
-      <div class="col-2-3">
-        <h3 class="light">Edit your form here</h3>
-        <div id="editor-frame">
-          <div id="editor"><div class="CodeMirror cm-s-default"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 14.7969px; left: 14.7969px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: -17px; border-right-width: 13px; min-height: 143px; min-width: 455.594px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure">AخA</div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 27px;">&nbsp;</div></div><div class="CodeMirror-code"><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">form</span> <span class="cm-attribute">method</span>=<span class="cm-string">"POST"</span> <span class="cm-attribute">action</span>=<span class="cm-string">"http://formspree.io/renewinkler@gmx.ch"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"email"</span> <span class="cm-attribute">name</span>=<span class="cm-string">"email"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Your email"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">textarea</span> <span class="cm-attribute">name</span>=<span class="cm-string">"message"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Your message"</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">textarea</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">type</span>=<span class="cm-string">"submit"</span><span class="cm-tag cm-bracket">&gt;</span>Send<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">form</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top: 143px;"></div><div class="CodeMirror-gutters" style="display: none; height: 156px;"></div></div></div></div>
-        </div>
-        <button id="resetButton">Reset</button>
-      </div>
-      <div class="col-1-3">
-        <h3 class="light">Test it here</h3>
-<div id="formview"><form method="POST" action="http://formspree.io/renewinkler@gmx.ch">
-  <input type="email" name="email" placeholder="Your email">
-  <textarea name="message" placeholder="Your message"></textarea>
-  <button type="submit">Send</button>
-</form></div>
-      </div>
-    </div>
+<form id='contact_form' method='POST'>
+  <div class='large-12 columns'>
+    <p id='thanks' style='display: none;'>
+      Thanks for contacting us, we'll be in touch soon!
+    </p>
   </div>
+  <div class='medium-12 columns'>
+    <input class='required' name='name' placeholder='NAME' type='text'>
+    <input class='required email' name='email' placeholder='EMAIL' type='text'>
+    <input class='required' name='subject' placeholder='SUBJECT' type='text'>
+    <textarea class='required' name='message' placeholder='MESSAGE'></textarea>
+    <input class='button white' type='submit'>
+  </div>
+</form>
 
-  <script src="./testformspree.com_files/index.js.download"></script>
+<script src="node_modules/jquery/dist/jquery.js" type="text/javascript"></script>
+<script>
+$('form#contact_form').validate({
+  messages: { },
+  submitHandler: function(form) {
+    $.ajax({
+      url: "//formspree.io/renewinkler@gmx.ch",
+      method: "POST",
+      data: $(form).serialize(),
+      dataType: "json",
+      success: function(data) {
+          $("form#contact_form :input").prop("disabled", true);
+          $('#thanks').show();
+      }
+    });
+    return false;
+  }
+});
+</script>
 
 </body></html>
