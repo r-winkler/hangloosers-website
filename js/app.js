@@ -174,15 +174,6 @@ $(function () {
 		}
 	});
 
-	// send email on click
-	$('#submit').click(function () {
-		console.log("button clicked");
-		$('#contact-form').attr('action'
-			, 'mailto:renewinkler@gmx.ch?subject=Hangloosers (' +
-			$('#name').val() + ',' + $('#email').val() +
-			')&body=' + $('#message').val());
-		$('#contact-form').submit();
-	});
 });
 
 function isInFuture(events) {

@@ -408,9 +408,15 @@
 						</div>
 
 						<!-- Modal Body -->
+						<form method="POST" action="http://formspree.io/renewinkler@gmx.ch">
+							<input type="email" name="email" placeholder="Your email">
+							<textarea name="message" placeholder="Your message"></textarea>
+							<button type="submit">Send</button>
+						</form>
+						<!--
 						<div class="modal-body">
 
-							<form id="contact-form" style="text-align: left">
+							<form id="contact-form" style="text-align: left" method="POST" action="http://formspree.io/renewinkler@gmx.ch">
 								<div class="class=form-group">
 									<label for="name">Name:</label>
 									<input id="name" class="form-control" type="text" maxlength="50 " pattern=".+\s.+" placeholder="Enter first and last name" autofocus required />
@@ -422,7 +428,7 @@
 
 								<div class="class=form-group">
 									<label for="email">Email:</label>
-									<input id="email" class="form-control" type="email" placeholder="Enter email" required/>
+									<input id="email" class="form-control" type="email" name="email" placeholder="Enter email" required/>
 									<div class="invalid validation-messages">
 										<span data-rule="valueMissing" class="hide">Bitte geben Sie eine Email an.</span>
 										<span data-rule="typeMismatch" class="hide">Keine gültige Email-Adresse.</span>
@@ -431,11 +437,12 @@
 
 								<div class="class=form-group">
 									<label for="message">Text:</label>
-									<textarea id="message" class="form-control" name="message" rows="10" placeholder="Enter message" required>
+									<textarea id="message" class="form-control" name="message" placeholder="Enter message" required>
 									</textarea>
 								</div>
 							</form>
 						</div>
+-->
 
 						<!-- Modal Footer -->
 						<div class="modal-footer">
