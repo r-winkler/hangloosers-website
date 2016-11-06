@@ -413,6 +413,8 @@
 						<div class="modal-body">
 
 							<form id="contact-form" style="text-align: left" method="POST" action="https://www.enformed.io/bbkrah8x">
+								<input type="hidden" name="*subject" value="Hangloosers Contact" />
+								<input type="hidden" name="*honeypot" />
 								<div class="class=form-group">
 									<label for="name">Name:</label>
 									<input id="name" name="name" class="form-control" type="text" maxlength="50" pattern=".+\s.+" placeholder="Enter first and last name" autofocus required />
@@ -433,17 +435,16 @@
 
 								<div class="class=form-group">
 									<label for="message">Text:</label>
-									<textarea id="message" class="form-control" name="message" placeholder="Enter message" required>
+									<textarea id="message" class="form-control" name="message" style="min-height: 150px" placeholder="Enter message" required>
 									</textarea>
 								</div>
+
 								<div class="modal-footer">
 									<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 									<button id="submit" type="submit" class="btn btn-primary form-group">Send</button>
 								</div>
 							</form>
 						</div>
-
-
 					</div>
 				</div>
 			</div>

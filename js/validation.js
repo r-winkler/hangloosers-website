@@ -10,10 +10,15 @@ $("[data-rule]").each(function (i, element) {
 var validate = function () {
 	$(".validation-messages span").addClass('hide');
 
-	document.getElementById('contact-form').checkValidity();
+	var valid = document.getElementById('contact-form').checkValidity();
+	if (valid) {
+		$('#submit').removeClass('disabled');
+	}
+
 };
 
 var validationFail = function (e) {
+	$('#submit').addClass('disabled');
 	var element = e.srcElement;
 	var validity = element.validity;
 
@@ -34,4 +39,5 @@ var checkRule = function (state, ruleName, element) {
 $(':input:not(:button)').each(function () {
 	this.oninvalid = validationFail;
 	this.onblur = validate;
+
 })
