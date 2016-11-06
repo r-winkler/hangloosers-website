@@ -409,13 +409,13 @@
 
 						<!-- Modal Body -->
 
-						<!--
+
 						<div class="modal-body">
 
-							<form id="contact-form" style="text-align: left" method="POST" action="http://formspree.io/renewinkler@gmx.ch">
+							<form id="contact-form" style="text-align: left" method="POST" action="https://www.enformed.io/bbkrah8x">
 								<div class="class=form-group">
 									<label for="name">Name:</label>
-									<input id="name" class="form-control" type="text" maxlength="50 " pattern=".+\s.+" placeholder="Enter first and last name" autofocus required />
+									<input id="name" name="name" class="form-control" type="text" maxlength="50" pattern=".+\s.+" placeholder="Enter first and last name" autofocus required />
 									<div class="invalid validation-messages">
 										<span data-rule="valueMissing" class="hide">Bitte geben Sie den Namen an.</span>
 										<span data-rule="patternMismatch" class="hide">Geben Sie Vor- und Nachname an.</span>
@@ -436,15 +436,14 @@
 									<textarea id="message" class="form-control" name="message" placeholder="Enter message" required>
 									</textarea>
 								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+									<button id="submit" type="submit" class="btn btn-primary form-group">Send</button>
+								</div>
 							</form>
 						</div>
--->
 
-						<!-- Modal Footer -->
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-							<button id="submit" type="submit" class="btn btn-primary">Send</button>
-						</div>
+
 					</div>
 				</div>
 			</div>
