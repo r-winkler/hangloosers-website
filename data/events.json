@@ -195,6 +195,34 @@
 		, "startDate": "02.11.2017"
 		, "endDate": "02.11.2017"
      }
+	
+	, {
+		"name": "Stammtisch"
+		, "location": "Playoff, Gwatt, 19Uhr"
+		, "startDate": "08.12.2016"
+		, "endDate": "08.12.2016"
+     }
+	
+	, {
+		"name": "Stammtisch"
+		, "location": "Playoff, Gwatt, 19Uhr"
+		, "startDate": "06.04.2017"
+		, "endDate": "06.04.2017"
+     }
+	
+	, {
+		"name": "Stammtisch"
+		, "location": "Playoff, Gwatt, 19Uhr"
+		, "startDate": "07.09.2017"
+		, "endDate": "07.09.2017"
+     }
+	
+	, {
+		"name": "Stammtisch"
+		, "location": "Playoff, Gwatt, 19Uhr"
+		, "startDate": "07.12.2017"
+		, "endDate": "07.12.2017"
+     }
 
 
 ]
