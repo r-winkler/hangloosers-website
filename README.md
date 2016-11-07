@@ -1,10 +1,13 @@
 # General
 
-This is the website of Hangloosers. The site is accesible via https://r-winkler.github.io/hangloosers-website or hangloosers.ch.
+This is the website of HANG LOOSErs. The site is accesible via hangloosers.ch.
 
 # Setup project
 
-npm install
+The web editor brackets.io ws used to implement this webpage.
+
+* git clone
+* npm install
 
 # Effects
 
@@ -13,15 +16,49 @@ npm install
 * scrollspy
 * parallalx scrolling
 * carousel: http://coolcarousels.frebsite.nl/c/7/
+* slick-carousel
+* flipcountdown
 
 # Hacks
 
 stellar.js needs jquery 2.2.4 in order that it works properly. Newer versions of jquery caused stellar.js to throw exceptions. Also note following issue of stellar.js: https://github.com/markdalgleish/stellar.js/issues/89 Two lines (435 and 436) in stellar.js have to be edited manually as mentioned in the comment. 
 
 
-# How to
+# Worth knowing (remembering)
+
+## 3rd party libs
+
+Whenever possible, all 3rd party libraries were included via npm. Otherwise they were manually downloaded and placed in js/libs.
+
+## Adding events
+
+Events are added in the events.json. They are automatically displayed in the calendar and in the upcoming events section. Countdown timers for events have to be created manually.
+
+## Contact form
+
+As github pages only supports static websites, it is not possible to integrate phb in order to send emails. Therefore, enformed.io is used for sending emails.
+
+## DNS
+
+DNS is configured as described here. The CNAME file was created automatically by github. Whenever the dNS is changed it takes a couple of hours before it is working.
+
+## Jekyll
+
+The .nojekyll file causes that the node_modules directory is not ignored on github.
+
+## Precompile less
+
+Less files are precompiled via the brackets less autocompile plugin. That allows to inlcude only plain css stylesheets in html files.
+
+## Not yet implemented
+	
+* Babel
+* webpack
+* Build
 
 ## Integrate Facebook album
+
+No facebook album is integrated directly on the page. But if this should be done, it can be performed as follows:
 
 ```javascript
 <div id="fb-root"></div>
