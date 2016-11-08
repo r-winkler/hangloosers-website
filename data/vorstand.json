@@ -14,7 +14,8 @@
 
 
 
-    
+
+	
 	, {
 		"function": "Vize-Präsident"
 		, "name": "René Winkler"
@@ -32,7 +33,8 @@
 
 
 
-    
+
+	
 	, {
 		"function": "Sportchef"
 		, "name": "Raphael Nardin"
@@ -50,7 +52,8 @@
 
 
 
-    
+
+	
 	, {
 		"function": "Beisitz"
 		, "name": "Chrigel Schöll"
@@ -68,11 +71,12 @@
 
 
 
-    
+
+	
 	, {
 		"function": "Kassier"
 		, "name": "Mike Feller"
-		, "description": "Draussen in den Bergen zu Hause."
+		, "description": "Passivflugsau - Fühlt sich draussen in den Bergen (am Boden) am wohlsten."
     }
 
 
@@ -86,7 +90,8 @@
 
 
 
-    
+
+	
 	, {
 		"description": "Der Vorstand besteht aus 5 Mitgliedern, die das Klubgeschehen gestalten und mitbestimmen. Einmal jährlich trifft sich der Vorstand um neue Pläne für die kommende Saison zu schmieden."
     }
