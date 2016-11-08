@@ -1,23 +1,8 @@
 [
-    {
-        "function": "Präsident"
-        , "name": "Patric Megert"
-        , "description": "Clubgründer und Pilot aus Leidenschaft. Er ist für jeden Spass zu haben..."
-    }
-
-
-
-
-
-
-
-
-
-    
-    , {
-        "function": "Vize-Präsident"
-        , "name": "René Winkler"
-        , "description": "Enthusiastischer Pilot seit 2008. Verbringt soviel Zeit wie möglich in der Luft."
+	{
+		"function": "Präsident"
+		, "name": "Patric Megert"
+		, "description": "Clubgründer und Pilot aus Leidenschaft. Er ist für jeden Spass zu haben..."
     }
 
 
@@ -29,12 +14,11 @@
 
 
 
-
     
-    , {
-        "function": "Sportchef"
-        , "name": "Raphael Nardin"
-        , "description": "IMMER irgendwo in der Luft, auch bei schlechtem Wetter :-)"
+	, {
+		"function": "Vize-Präsident"
+		, "name": "René Winkler"
+		, "description": "Enthusiastischer Pilot seit 2008. Verbringt soviel Zeit wie möglich in der Luft."
     }
 
 
@@ -47,11 +31,12 @@
 
 
 
+
     
-    , {
-        "function": "Beisitz"
-        , "name": "Chrigel Schöll"
-        , "description": "Unser Oldie in der Truppe. Fliegt über 20 Jahren und hat immer der richtige Riecher."
+	, {
+		"function": "Sportchef"
+		, "name": "Raphael Nardin"
+		, "description": "IMMER irgendwo in der Luft, auch bei schlechtem Wetter :-)"
     }
 
 
@@ -64,11 +49,12 @@
 
 
 
+
     
-    , {
-        "function": "Kassier"
-        , "name": "Mike Feller"
-        , "description": "Unser IOTA-Rookie pusht nach vorne :)"
+	, {
+		"function": "Beisitz"
+		, "name": "Chrigel Schöll"
+		, "description": "Unser Oldie in der Truppe. Fliegt über 20 Jahren und hat immer der richtige Riecher."
     }
 
 
@@ -81,8 +67,27 @@
 
 
 
+
     
-    , {
-        "description": "Der Vorstand besteht aus 5 Mitgliedern, die das Klubgeschehen gestalten und mitbestimmen. Einmal jährlich trifft sich der Vorstand um neue Pläne für die kommende Saison zu schmieden."
+	, {
+		"function": "Kassier"
+		, "name": "Mike Feller"
+		, "description": "Draussen in den Bergen zu Hause."
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    
+	, {
+		"description": "Der Vorstand besteht aus 5 Mitgliedern, die das Klubgeschehen gestalten und mitbestimmen. Einmal jährlich trifft sich der Vorstand um neue Pläne für die kommende Saison zu schmieden."
     }
 ]
