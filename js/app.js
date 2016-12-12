@@ -158,11 +158,47 @@ $(function () {
 	var dt = new Date();
 	$('#flipcountdownbox1').flipcountdown({
 		size: 'sm'
-		, beforeDateTime: '12/13/2016 12:00:00'
+		, tick: function customTick(dateStr) {
+			var nol = function (h) {
+				return h > 9 ? h : '0' + h;
+			}
+			var beforeDateTime = Math.round((new Date('12/13/2016 11:50:00')).getTime() / 1000);
+			var actualDateTime = Math.round((new Date()).getTime() / 1000);
+			if (beforeDateTime < actualDateTime) {
+				return [nol(0), nol(0), nol(0), nol(0)];
+			}
+			var range = Math.max(0, beforeDateTime - actualDateTime)
+				, secday = 86400
+				, sechour = 3600
+				, days = parseInt(range / secday)
+				, hours = parseInt((range % secday) / sechour)
+				, min = parseInt(((range % secday) % sechour) / 60)
+				, sec = ((range % secday) % sechour) % 60;
+			return [nol(days), nol(hours), nol(min), nol(sec)];
+
+		}
 	});
 	$('#flipcountdownbox2').flipcountdown({
 		size: 'sm'
-		, beforeDateTime: '01/07/2017 00:00:00'
+		, tick: function customTick(dateStr) {
+			var nol = function (h) {
+				return h > 9 ? h : '0' + h;
+			}
+			var beforeDateTime = Math.round((new Date('01/07/2017 00:00:00')).getTime() / 1000);
+			var actualDateTime = Math.round((new Date()).getTime() / 1000);
+			if (beforeDateTime < actualDateTime) {
+				return [nol(0), nol(0), nol(0), nol(0)];
+			}
+			var range = Math.max(0, beforeDateTime - actualDateTime)
+				, secday = 86400
+				, sechour = 3600
+				, days = parseInt(range / secday)
+				, hours = parseInt((range % secday) / sechour)
+				, min = parseInt(((range % secday) % sechour) / 60)
+				, sec = ((range % secday) % sechour) % 60;
+			return [nol(days), nol(hours), nol(min), nol(sec)];
+
+		}
 	});
 
 	// gallery
