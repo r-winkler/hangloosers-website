@@ -162,7 +162,7 @@ $(function () {
 			var nol = function (h) {
 				return h > 9 ? h : '0' + h;
 			}
-			var beforeDateTime = Math.round((new Date('07/01/2017 00:00:00')).getTime() / 1000);
+			var beforeDateTime = Math.round((new Date('01/07/2017 00:00:00')).getTime() / 1000);
 			var actualDateTime = Math.round((new Date()).getTime() / 1000);
 			if (beforeDateTime < actualDateTime) {
 				return [nol(0), nol(0), nol(0), nol(0)];
