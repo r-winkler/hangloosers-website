@@ -378,6 +378,8 @@
 		, "startDate": "08.12.2016"
 		, "endDate": "08.12.2016"
      }
+    
+
 
 
 
@@ -431,6 +433,14 @@
 		, "location": "Playoff, Gwatt, 19Uhr"
 		, "startDate": "07.12.2017"
 		, "endDate": "07.12.2017"
+     }
+    
+    
+    , {
+		"name": "HLrs Challenge"
+		, "location": "Adelboden-Lenk"
+		, "startDate": "09.12.2017"
+		, "endDate": "09.12.2017"
      }
 
 
