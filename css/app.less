@@ -300,6 +300,14 @@ body {
 	}
 }
 
+.livetrack-xs {
+	display: none;
+}
+
+.livetrack {
+	margin-bottom: 25px;
+}
+
 #livetrack {
 	.content();
 	h1 {
@@ -314,6 +322,17 @@ body {
 @media @xs-layout {
 	#livetrack {
 		.xs-layout();
+	}
+	.livetrack {
+		display: none;
+	}
+	.livetrack-xs {
+		display: block;
+		text-align: center;
+		font-weight: bold;
+		font-size: 1.4em;
+		margin-top: 30px;
+		margin-bottom: 100px;
 	}
 }
 
