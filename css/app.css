@@ -270,6 +270,29 @@ body {
     margin-bottom: 100px;
   }
 }
+#livetrack {
+  margin: 120px 40px;
+}
+#livetrack img {
+  margin: 0 auto;
+}
+#livetrack h1 {
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#livetrack p {
+  font-size: 18px;
+  padding: 20px 50px;
+}
+@media (max-width: 767px) {
+  #livetrack {
+    margin: 10px 0px;
+  }
+  #livetrack p {
+    padding: 10px 5px;
+  }
+}
 #gallery {
   margin: 120px 40px;
 }
