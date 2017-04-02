@@ -25,6 +25,7 @@
 	<!-- Scripts -->
 	<!-- needs to be in front of carouFredSel lib -->
 	<script src="node_modules/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script src="node_modules/jquery-recliner/recliner.min.js"></script>
 	<!-- put this lib in head -->
 	<script src="js/libs/jquery.carouFredSel-6.1.0-packed.js" type="text/javascript"></script>
 	<!-- is here because of carouFredSel -->
@@ -82,7 +83,7 @@
 		</section>
 
 		<section class="row">
-			<div class="fill-screen fixed-attachment" style="background-image: url(img/title0.jpg); background-position: right;" />
+			<div class="fill-screen fixed-attachment" data-src="img/title0.jpg" style="background-image: url(img/title0.jpg); background-position: right;" />
 		</section>
 
 		<section id="vorstand" class="row">
@@ -92,7 +93,7 @@
 			<div class="vorstand-lg-carousel-wrapper visible-lg-block">
 				<div id="vorstand-lg-carousel" class="vorstand">
 					<div class="president">
-						<img src="img/vorstand/img1.jpg" class="img-responsive" />
+						<img data-src="img/vorstand/img1.jpg" class="lazy img-responsive" />
 						<span>
                             <h4 class="title"></h4>
                             <h6 class="name"></h6>
@@ -100,7 +101,7 @@
                         </span>
 					</div>
 					<div class="vize">
-						<img src="img/vorstand/img2.jpg" class="img-responsive" />
+						<img data-src="img/vorstand/img2.jpg" class="lazy img-responsive" />
 						<span>
                             <h4 class="title"></h4>
                             <h6 class="name"></h6>
@@ -108,7 +109,7 @@
                         </span>
 					</div>
 					<div class="sportchef">
-						<img src="img/vorstand/img3.jpg" class="img-responsive" />
+						<img data-src="img/vorstand/img3.jpg" class="lazy img-responsive" />
 						<span>
                             <h4 class="title"></h4>
                             <h6 class="name"></h6>
@@ -116,7 +117,7 @@
                         </span>
 					</div>
 					<div class="sekretaer">
-						<img src="img/vorstand/img4.png" class="img-responsive" />
+						<img data-src="img/vorstand/img4.png" class="lazy img-responsive" />
 						<span>
                             <h4 class="title"></h4>
                             <h6 class="name"></h6>
@@ -129,7 +130,7 @@
                         </span>
 					</div>
 					<div class="kassier">
-						<img src="img/vorstand/img5.jpg" class="img-responsive" />
+						<img data-src="img/vorstand/img5.jpg" class="lazy img-responsive" />
 						<span>
                             <h4 class="title"></h4>
                             <h6 class="name"></h6>
@@ -143,7 +144,7 @@
 			<div id="vorstand-xs-carousel" class="vorstand visible-xs-block">
 
 				<div class="president">
-					<img src="img/vorstand/img1.jpg" class="img-responsive" />
+					<img data-src="img/vorstand/img1.jpg" class="lazy img-responsive" />
 					<span>
                         <h4 class="title"></h4>
                         <h6 class="name"></h6>
@@ -151,7 +152,7 @@
                     </span>
 				</div>
 				<div class="vize">
-					<img src="img/vorstand/img2.jpg" class="img-responsive" />
+					<img data-src="img/vorstand/img2.jpg" class="lazy img-responsive" />
 					<span>
                         <h4 class="title"></h4>
                         <h6 class="name"></h6>
@@ -160,7 +161,7 @@
 
 				</div>
 				<div class="sportchef">
-					<img src="img/vorstand/img3.jpg" class="img-responsive" />
+					<img data-src="img/vorstand/img3.jpg" class="lazy img-responsive" />
 					<span>
                         <h4 class="title"></h4>
                         <h6 class="name"></h6>
@@ -168,7 +169,7 @@
                     </span>
 				</div>
 				<div class="sekretaer">
-					<img src="img/vorstand/img4.png" class="img-responsive" />
+					<img data-src="img/vorstand/img4.png" class="lazy img-responsive" />
 					<span>
                         <h4 class="title"></h4>
                         <h6 class="name"></h6>
@@ -177,7 +178,7 @@
 				</div>
 
 				<div class="kassier">
-					<img src="img/vorstand/img5.jpg" class="img-responsive" />
+					<img data-src="img/vorstand/img5.jpg" class="lazy img-responsive" />
 					<span>
                         <h4 class="title"></h4>
                         <h6 class="name"></h6>
@@ -190,7 +191,7 @@
 			<div class="vorstand vorstand-sm-md-layout visible-sm-block visible-md-block">
 				<div class="row president">
 					<div class="col-sm-6">
-						<img src="img/vorstand/img1.jpg" class="img-responsive" />
+						<img data-src="img/vorstand/img1.jpg" class="lazy img-responsive" />
 					</div>
 					<div class="col-sm-6">
 						<span>
@@ -202,7 +203,7 @@
 				</div>
 				<div class="row vize">
 					<div class="col-sm-6">
-						<img src="img/vorstand/img2.jpg" class="img-responsive" />
+						<img data-src="img/vorstand/img2.jpg" class="lazy img-responsive" />
 					</div>
 					<div class="col-sm-6">
 						<span>
@@ -214,7 +215,7 @@
 				</div>
 				<div class="row sportchef">
 					<div class="col-sm-6">
-						<img src="img/vorstand/img3.jpg" class="img-responsive" />
+						<img data-src="img/vorstand/img3.jpg" class="lazy img-responsive" />
 					</div>
 					<div class="col-sm-6">
 						<span>
@@ -226,7 +227,7 @@
 				</div>
 				<div class="row sekretaer">
 					<div class="col-sm-6">
-						<img src="img/vorstand/img4.png" class="img-responsive" />
+						<img data-src="img/vorstand/img4.png" class="lazy img-responsive" />
 					</div>
 					<div class="col-sm-6">
 						<span>
@@ -238,7 +239,7 @@
 				</div>
 				<div class="row kassier">
 					<div class="col-sm-6">
-						<img src="img/vorstand/img5.jpg" class="img-responsive" />
+						<img data-src="img/vorstand/img5.jpg" class="lazy img-responsive" />
 					</div>
 					<div class="col-sm-6">
 						<span>
@@ -252,18 +253,18 @@
 		</section>
 
 		<section class="row">
-			<div class="fill-screen fixed-attachment" style="background-image: url(img/title1.jpg)" />
+			<div class="fill-screen fixed-attachment" style="background-image: url(img/title1.jpg);" />
 		</section>
 
 		<section id="events">
 			<h1>EVENTS</h1>
 			<div class="flag col-lg-3">
-				<img src="img/flags/skitag.jpg" class="img-responsive" />
+				<img data-src="img/flags/skitag.jpg" class="lazy img-responsive" />
 				<div id="flipcountdownbox1" class="countdown"></div>
 				<h2>Skitag</h2>
 			</div>
 			<div class="flag col-lg-3">
-				<img src="img/flags/locarno.jpg" class="img-responsive" />
+				<img data-src="img/flags/locarno.jpg" class="lazy img-responsive" />
 				<div id="flipcountdownbox2" class="countdown"></div>
 				<h2>Alpensüdseite Weekend</h2>
 			</div>
@@ -319,7 +320,7 @@
 		<section id="fluege" class="row">
 			<h1>FLÜGE</h1>
 			<div class="flights col-lg-10 col-lg-offset-1">
-				<iframe src="http://www.xcontest.org/switzerland/en/ranking-pg-club:1668" style="border: 0; width:100%; min-height:500px;">
+				<iframe data-src="http://www.xcontest.org/switzerland/en/ranking-pg-club:1668" class="lazy" style="border: 0; width:100%; min-height:500px;">
 				</iframe>
 			</div>
 			<img src="img/xcontest.gif" class="img-responsive flights-xs" />
@@ -333,29 +334,29 @@
 		<section id="livetrack" class="row">
 			<h1>Livetrack</h1>
 			<div class="livetrack col-lg-10 col-lg-offset-1">
-				<iframe src="http://www.livetrack24.com/user/patricmegert/2d" style="border: 0; width:100%; min-height:500px;">
+				<iframe data-src="http://www.livetrack24.com/user/patricmegert/2d" class="lazy" style="border: 0; width:100%; min-height:500px;">
 				</iframe>
 			</div>
 			<div class="livetrack col-lg-10 col-lg-offset-1">
-				<iframe src="http://www.livetrack24.com/user/chswatz/2d" style="border: 0; width:100%; min-height:500px;">
+				<iframe data-src="http://www.livetrack24.com/user/chswatz/2d" class="lazy" style="border: 0; width:100%; min-height:500px;">
 				</iframe>
 			</div>
 			<div class="livetrack col-lg-10 col-lg-offset-1">
-				<iframe src="http://www.livetrack24.com/user/renewinkler/2d" style="border: 0; width:100%; min-height:500px;">
+				<iframe data-src="http://www.livetrack24.com/user/renewinkler/2d" class="lazy" style="border: 0; width:100%; min-height:500px;">
 				</iframe>
 			</div>
 
 			<div class="livetrack-xs">
 				<div>
-					<iframe src="http://status.livetrack24.com/user/patricmegert/status/map/1" style="border: 0; width:200px; min-height:150px;">
+					<iframe data-src="http://status.livetrack24.com/user/patricmegert/status/map/1" class="lazy" style="border: 0; width:200px; min-height:150px;">
 					</iframe>
 				</div>
 				<div>
-					<iframe src="http://status.livetrack24.com/user/chswatz/status/map/1" style="border: 0; width:200px; min-height:150px;">
+					<iframe data-src="http://status.livetrack24.com/user/chswatz/status/map/1" class="lazy" style="border: 0; width:200px; min-height:150px;">
 					</iframe>
 				</div>
 				<div>
-					<iframe src="http://status.livetrack24.com/user/renewinkler/status/map/1" style="border: 0; width:200px; min-height:150px;">
+					<iframe data-src="http://status.livetrack24.com/user/renewinkler/status/map/1" class="lazy" style="border: 0; width:200px; min-height:150px;">
 					</iframe>
 				</div>
 			</div>
@@ -370,41 +371,41 @@
 			<h1>GALLERY</h1>
 			<div id="gallery-wrapper" class="col-xs-10 col-md-8 col-lg-6 col-xs-offset-1 col-md-offset-2 col-lg-offset-3">
 				<div class="gallery-content">
-					<a href="img/gallery/img0.jpg" class="gallery-item"><img src="img/gallery/img0.jpg" /></a>
-					<a href="img/gallery/img1.jpg" class="gallery-item"><img src="img/gallery/img1.jpg" /></a>
-					<a href="img/gallery/img2.jpg" class="gallery-item"><img src="img/gallery/img2.jpg" /></a>
-					<a href="img/gallery/img3.jpg" class="gallery-item"><img src="img/gallery/img3.jpg" /></a>
-					<a href="img/gallery/img4.jpg" class="gallery-item"><img src="img/gallery/img4.jpg" /></a>
-					<a href="img/gallery/img5.jpg" class="gallery-item"><img src="img/gallery/img5.jpg" /></a>
-					<a href="img/gallery/img6.jpg" class="gallery-item"><img src="img/gallery/img6.jpg" /></a>
-					<a href="img/gallery/img7.jpg" class="gallery-item"><img src="img/gallery/img7.jpg" /></a>
-					<a href="img/gallery/img8.jpg" class="gallery-item"><img src="img/gallery/img8.jpg" /></a>
-					<a href="img/gallery/img9.jpg" class="gallery-item"><img src="img/gallery/img9.jpg" /></a>
-					<a href="img/gallery/img10.jpg" class="gallery-item"><img src="img/gallery/img10.jpg" /></a>
-					<a href="img/gallery/img11.jpg" class="gallery-item"><img src="img/gallery/img11.jpg" /></a>
-					<a href="img/gallery/img12.jpg" class="gallery-item"><img src="img/gallery/img12.jpg" /></a>
-					<a href="img/gallery/img13.jpg" class="gallery-item"><img src="img/gallery/img13.jpg" /></a>
-					<a href="img/gallery/img14.jpg" class="gallery-item"><img src="img/gallery/img14.jpg" /></a>
-					<a href="img/gallery/img15.jpg" class="gallery-item"><img src="img/gallery/img15.jpg" /></a>
-					<a href="img/gallery/img16.jpg" class="gallery-item"><img src="img/gallery/img16.jpg" /></a>
-					<a href="img/gallery/img17.jpg" class="gallery-item"><img src="img/gallery/img17.jpg" /></a>
-					<a href="img/gallery/img18.jpg" class="gallery-item"><img src="img/gallery/img18.jpg" /></a>
-					<a href="img/gallery/img19.jpg" class="gallery-item"><img src="img/gallery/img19.jpg" /></a>
-					<a href="img/gallery/img20.jpg" class="gallery-item"><img src="img/gallery/img20.jpg" /></a>
-					<a href="img/gallery/img21.jpg" class="gallery-item"><img src="img/gallery/img21.jpg" /></a>
-					<a href="img/gallery/img22.jpg" class="gallery-item"><img src="img/gallery/img22.jpg" /></a>
-					<a href="img/gallery/img23.jpg" class="gallery-item"><img src="img/gallery/img23.jpg" /></a>
-					<a href="img/gallery/img24.jpg" class="gallery-item"><img src="img/gallery/img24.jpg" /></a>
-					<a href="img/gallery/img25.jpg" class="gallery-item"><img src="img/gallery/img25.jpg" /></a>
-					<a href="img/gallery/img26.jpg" class="gallery-item"><img src="img/gallery/img26.jpg" /></a>
-					<a href="img/gallery/img27.jpg" class="gallery-item"><img src="img/gallery/img27.jpg" /></a>
-					<a href="img/gallery/img28.jpg" class="gallery-item"><img src="img/gallery/img28.jpg" /></a>
-					<a href="img/gallery/img29.jpg" class="gallery-item"><img src="img/gallery/img29.jpg" /></a>
-					<a href="img/gallery/img30.jpg" class="gallery-item"><img src="img/gallery/img30.jpg" /></a>
-					<a href="img/gallery/img31.jpg" class="gallery-item"><img src="img/gallery/img31.jpg" /></a>
-					<a href="img/gallery/img32.jpg" class="gallery-item"><img src="img/gallery/img32.jpg" /></a>
-					<a href="img/gallery/img33.jpg" class="gallery-item"><img src="img/gallery/img33.jpg" /></a>
-					<a href="img/gallery/img34.jpg" class="gallery-item"><img src="img/gallery/img34.jpg" /></a>
+					<a href="img/gallery/img0.jpg" class="gallery-item"><img data-src="img/gallery/img0.jpg" class="lazy"/></a>
+					<a href="img/gallery/img1.jpg" class="gallery-item"><img data-src="img/gallery/img1.jpg" class="lazy"/></a>
+					<a href="img/gallery/img2.jpg" class="gallery-item"><img data-src="img/gallery/img2.jpg" class="lazy"/></a>
+					<a href="img/gallery/img3.jpg" class="gallery-item"><img data-src="img/gallery/img3.jpg" class="lazy"/></a>
+					<a href="img/gallery/img4.jpg" class="gallery-item"><img data-src="img/gallery/img4.jpg" class="lazy"/></a>
+					<a href="img/gallery/img5.jpg" class="gallery-item"><img data-src="img/gallery/img5.jpg" class="lazy"/></a>
+					<a href="img/gallery/img6.jpg" class="gallery-item"><img data-src="img/gallery/img6.jpg" class="lazy"/></a>
+					<a href="img/gallery/img7.jpg" class="gallery-item"><img data-src="img/gallery/img7.jpg" class="lazy"/></a>
+					<a href="img/gallery/img8.jpg" class="gallery-item"><img data-src="img/gallery/img8.jpg" class="lazy"/></a>
+					<a href="img/gallery/img9.jpg" class="gallery-item"><img data-src="img/gallery/img9.jpg" class="lazy"/></a>
+					<a href="img/gallery/img10.jpg" class="gallery-item"><img data-src="img/gallery/img10.jpg" class="lazy"/></a>
+					<a href="img/gallery/img11.jpg" class="gallery-item"><img data-src="img/gallery/img11.jpg" class="lazy"/></a>
+					<a href="img/gallery/img12.jpg" class="gallery-item"><img data-src="img/gallery/img12.jpg" class="lazy"/></a>
+					<a href="img/gallery/img13.jpg" class="gallery-item"><img data-src="img/gallery/img13.jpg" class="lazy"/></a>
+					<a href="img/gallery/img14.jpg" class="gallery-item"><img data-src="img/gallery/img14.jpg" class="lazy"/></a>
+					<a href="img/gallery/img15.jpg" class="gallery-item"><img data-src="img/gallery/img15.jpg" class="lazy"/></a>
+					<a href="img/gallery/img16.jpg" class="gallery-item"><img data-src="img/gallery/img16.jpg" class="lazy"/></a>
+					<a href="img/gallery/img17.jpg" class="gallery-item"><img data-src="img/gallery/img17.jpg" class="lazy"/></a>
+					<a href="img/gallery/img18.jpg" class="gallery-item"><img data-src="img/gallery/img18.jpg" class="lazy"/></a>
+					<a href="img/gallery/img19.jpg" class="gallery-item"><img data-src="img/gallery/img19.jpg" class="lazy"/></a>
+					<a href="img/gallery/img20.jpg" class="gallery-item"><img data-src="img/gallery/img20.jpg" class="lazy"/></a>
+					<a href="img/gallery/img21.jpg" class="gallery-item"><img data-src="img/gallery/img21.jpg" class="lazy"/></a>
+					<a href="img/gallery/img22.jpg" class="gallery-item"><img data-src="img/gallery/img22.jpg" class="lazy"/></a>
+					<a href="img/gallery/img23.jpg" class="gallery-item"><img data-src="img/gallery/img23.jpg" class="lazy"/></a>
+					<a href="img/gallery/img24.jpg" class="gallery-item"><img data-src="img/gallery/img24.jpg" class="lazy"/></a>
+					<a href="img/gallery/img25.jpg" class="gallery-item"><img data-src="img/gallery/img25.jpg" class="lazy"/></a>
+					<a href="img/gallery/img26.jpg" class="gallery-item"><img data-src="img/gallery/img26.jpg" class="lazy"/></a>
+					<a href="img/gallery/img27.jpg" class="gallery-item"><img data-src="img/gallery/img27.jpg" class="lazy"/></a>
+					<a href="img/gallery/img28.jpg" class="gallery-item"><img data-src="img/gallery/img28.jpg" class="lazy"/></a>
+					<a href="img/gallery/img29.jpg" class="gallery-item"><img data-src="img/gallery/img29.jpg" class="lazy"/></a>
+					<a href="img/gallery/img30.jpg" class="gallery-item"><img data-src="img/gallery/img30.jpg" class="lazy"/></a>
+					<a href="img/gallery/img31.jpg" class="gallery-item"><img data-src="img/gallery/img31.jpg" class="lazy"/></a>
+					<a href="img/gallery/img32.jpg" class="gallery-item"><img data-src="img/gallery/img32.jpg" class="lazy"/></a>
+					<a href="img/gallery/img33.jpg" class="gallery-item"><img data-src="img/gallery/img33.jpg" class="lazy"/></a>
+					<a href="img/gallery/img34.jpg" class="gallery-item"><img data-src="img/gallery/img34.jpg" class="lazy"/></a>
 				</div>
 			</div>
 
@@ -412,7 +413,7 @@
 
 			<div class="video">
 				<div class="embed-responsive embed-responsive-4by3">
-					<iframe class="video" src="https://player.vimeo.com/video/165947612" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					<iframe class="lazy video" data-src="https://player.vimeo.com/video/165947612" style="width:400px; height: 300px" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				</div>
 			</div>
 

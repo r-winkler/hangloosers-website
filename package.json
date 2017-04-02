@@ -28,6 +28,7 @@
     "flipcountdown": "^3.0.5",
     "font-awesome": "^4.6.3",
     "jquery": "2.2.4",
+    "jquery-recliner": "^0.2.5",
     "less": "^2.7.1",
     "magnific-popup": "^1.1.0",
     "slick-carousel": "^1.6.0"
