@@ -30,7 +30,7 @@ $(function () {
     $(".lazy").recliner({
     attrib: "data-src", // selector for attribute containing the media src
     throttle: 200,      // millisecond interval at which to process events
-    threshold: 300,     // scroll distance from element before its loaded
+    threshold: 200,     // scroll distance from element before its loaded
     printable: true,    // be printer friendly and show all elements on document print
     live: true          // auto bind lazy loading to ajax loaded elements
 });
