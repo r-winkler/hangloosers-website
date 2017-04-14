@@ -83,6 +83,6 @@ Replace data-href with the link of the desired facebook album.
 * Cloudflare is used as nameserver which makes the website faster, safer and smarter
 * js scripts and css files are minimized (npm i -g minifiy)
 * Additional Js, CSS and HTML files are minimized by cloudflare
-* Browser Caching is provided by cloudflare and set to 8 days
+* Browser Caching is provided by cloudflare and set to 8 days (additional page rule is configured to cache everything)
 
 

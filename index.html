@@ -2,337 +2,473 @@
 <html lang="de">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="text/html;charset=UTF-8">
-	<title>HANG LOOSErs</title>
-	<meta name="author" content="René Winkler">
-	<meta name="description" content="Gleitschirmclub Thun">
-	<meta name="keywords" content="Paragliding, Gleitschirm, Club, Thun, Berner Oberland, Switzerland">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="text/html;charset=UTF-8">
+    <title>HANG LOOSErs</title>
+    <meta name="author" content="René Winkler">
+    <meta name="description" content="Gleitschirmclub Thun">
+    <meta name="keywords" content="Paragliding, Gleitschirm, Club, Thun, Berner Oberland, Switzerland">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-	<!-- Styleshets -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="node_modules/bootstrap-social/bootstrap-social.min.css" rel="stylesheet" />
-	<link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-	<link href="node_modules/bootstrap-year-calendar/css/bootstrap-year-calendar.min.css" rel="stylesheet" />
-	<link href="node_modules/slick-carousel/slick/slick.min.css" rel="stylesheet" />
-	<link href="node_modules/slick-carousel/slick/slick-theme.min.css" rel="stylesheet" />
-	<link href="node_modules/flipcountdown/jquery.flipcountdown.min.css" rel="stylesheet" />
-	<link href="node_modules/magnific-popup/dist/magnific-popup.min.css" rel="stylesheet">
-	<link href="css/app.css" rel="stylesheet" />
+    <!-- Styleshets -->
 
-	<!-- Scripts -->
-	<!-- needs to be in front of carouFredSel lib -->
-	<script src="node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
-	<!-- put this lib in head -->
-	<script src="js/libs/jquery.carouFredSel-6.1.0-packed.js" type="text/javascript"></script>
-	<!-- is here because of carouFredSel -->
-	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <link rel="preload" href="css/app.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="node_modules/bootstrap/dist/css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="node_modules/bootstrap-social/bootstrap-social.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="node_modules/font-awesome/css/font-awesome.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="node_modules/bootstrap-year-calendar/css/bootstrap-year-calendar.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="node_modules/slick-carousel/slick/slick.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="node_modules/slick-carousel/slick/slick-theme.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="node_modules/flipcountdown/jquery.flipcountdown.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="node_modules/magnific-popup/dist/magnific-popup.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="node_modules/bootstrap-social/bootstrap-social.min.css" rel="stylesheet" />
+        <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="node_modules/bootstrap-year-calendar/css/bootstrap-year-calendar.min.css" rel="stylesheet" />
+        <link href="node_modules/slick-carousel/slick/slick.min.css" rel="stylesheet" />
+        <link href="node_modules/slick-carousel/slick/slick-theme.min.css" rel="stylesheet" />
+        <link href="node_modules/flipcountdown/jquery.flipcountdown.min.css" rel="stylesheet" />
+        <link href="node_modules/magnific-popup/dist/magnific-popup.min.css" rel="stylesheet">
+        <link href="css/app.css" rel="stylesheet" />
+    </noscript>
+    <script>
+        (function (w) {
+            "use strict";
+            /* exported loadCSS */
+            var loadCSS = function (href, before, media) {
+                // Arguments explained:
+                // `href` [REQUIRED] is the URL for your CSS file.
+                // `before` [OPTIONAL] is the element the script should use as a reference for injecting our stylesheet <link> before
+                // By default, loadCSS attempts to inject the link after the last stylesheet or script in the DOM. However, you might desire a more specific location in your document.
+                // `media` [OPTIONAL] is the media type or query of the stylesheet. By default it will be 'all'
+                var doc = w.document;
+                var ss = doc.createElement("link");
+                var ref;
+                if (before) {
+                    ref = before;
+                } else {
+                    var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+                    ref = refs[refs.length - 1];
+                }
+
+                var sheets = doc.styleSheets;
+                ss.rel = "stylesheet";
+                ss.href = href;
+                // temporarily set media to something inapplicable to ensure it'll fetch without blocking render
+                ss.media = "only x";
+
+                // wait until body is defined before injecting link. This ensures a non-blocking load in IE11.
+                function ready(cb) {
+                    if (doc.body) {
+                        return cb();
+                    }
+                    setTimeout(function () {
+                        ready(cb);
+                    });
+                }
+                // Inject link
+                // Note: the ternary preserves the existing behavior of "before" argument, but we could choose to change the argument to "after" in a later release and standardize on ref.nextSibling for all refs
+                // Note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
+                ready(function () {
+                    ref.parentNode.insertBefore(ss, (before ? ref : ref.nextSibling));
+                });
+                // A method (exposed on return object for external use) that mimics onload by polling document.styleSheets until it includes the new sheet.
+                var onloadcssdefined = function (cb) {
+                    var resolvedHref = ss.href;
+                    var i = sheets.length;
+                    while (i--) {
+                        if (sheets[i].href === resolvedHref) {
+                            return cb();
+                        }
+                    }
+                    setTimeout(function () {
+                        onloadcssdefined(cb);
+                    });
+                };
+
+                function loadCB() {
+                    if (ss.addEventListener) {
+                        ss.removeEventListener("load", loadCB);
+                    }
+                    ss.media = media || "all";
+                }
+
+                // once loaded, set link's media back to `all` so that the stylesheet applies once it loads
+                if (ss.addEventListener) {
+                    ss.addEventListener("load", loadCB);
+                }
+                ss.onloadcssdefined = onloadcssdefined;
+                onloadcssdefined(loadCB);
+                return ss;
+            };
+            // commonjs
+            if (typeof exports !== "undefined") {
+                exports.loadCSS = loadCSS;
+            } else {
+                w.loadCSS = loadCSS;
+            }
+        }(typeof global !== "undefined" ? global : this));
+        /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+        (function (w) {
+            // rel=preload support test
+            if (!w.loadCSS) {
+                return;
+            }
+            var rp = loadCSS.relpreload = {};
+            rp.support = function () {
+                try {
+                    return w.document.createElement("link").relList.supports("preload");
+                } catch (e) {
+                    return false;
+                }
+            };
+
+            // loop preload links and fetch using loadCSS
+            rp.poly = function () {
+                var links = w.document.getElementsByTagName("link");
+                for (var i = 0; i < links.length; i++) {
+                    var link = links[i];
+                    if (link.rel === "preload" && link.getAttribute("as") === "style") {
+                        w.loadCSS(link.href, link, link.getAttribute("media"));
+                        link.rel = null;
+                    }
+                }
+            };
+
+            // if link[rel=preload] is not supported, we must fetch the CSS manually using loadCSS
+            if (!rp.support()) {
+                rp.poly();
+                var run = w.setInterval(rp.poly, 300);
+                if (w.addEventListener) {
+                    w.addEventListener("load", function () {
+                        rp.poly();
+                        w.clearInterval(run);
+                    });
+                }
+                if (w.attachEvent) {
+                    w.attachEvent("onload", function () {
+                        w.clearInterval(run);
+                    })
+                }
+            }
+        }(this));
+    </script>
+
+    <!-- Scripts -->
+    <!-- needs to be in front of carouFredSel lib -->
+    <script src="node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <!-- put this lib in head -->
+    <script src="js/libs/jquery.carouFredSel-6.1.0-packed.js" type="text/javascript"></script>
+    <!-- is here because of carouFredSel -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
 
 </head>
 
 <body>
 
-	<!-- ##### NAVBAR ##### -->
-	<header id="top">
-		<nav class="navbar navbar-inverse navbar-fixed-top cbp-af-header">
-			<div class="container-fluid">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-					<a href="#top"><img src="img/logo.png"></a>
-				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div id="navbar-main" class="collapse navbar-collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#top">Home</a></li>
-						<li><a href="#club">Club</a></li>
-						<li><a href="#vorstand">Vorstand</a></li>
-						<li><a href="#events">Events</a></li>
-						<li><a href="#fluege">Flüge</a></li>
-						<li><a href="#livetrack">Livetrack</a></li>
-						<li><a href="#gallery">Gallery</a></li>
-						<li><a href="#contact-us">Contact Us</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
+    <!-- ##### NAVBAR ##### -->
+    <header id="top">
+        <nav class="navbar navbar-inverse navbar-fixed-top cbp-af-header">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <a href="#top"><img src="img/logo.png"></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div id="navbar-main" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#top">Home</a></li>
+                        <li><a href="#club">Club</a></li>
+                        <li><a href="#vorstand">Vorstand</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#fluege">Flüge</a></li>
+                        <li><a href="#livetrack">Livetrack</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact-us">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-	<!-- ##### CONTENT ##### -->
-	<div class="container-fluid">
-		<section class="row title-row">
-			<div class="fill-screen stellar-bg" style="background-image: url(img/title.jpg)" data-stellar-background-ratio="0.2"> <img id="title-logo" class="img-responsive grow" src="img/logo-title.png" alt="HANG LOOSErs logo" />
-				<div class="down-button">
-					<a class="btn" href="#club"> <i class="fa fa-arrow-circle-down fa-4x"></i> </a>
-				</div>
-			</div>
-		</section>
+    <!-- ##### CONTENT ##### -->
+    <div class="container-fluid">
+        <section class="row title-row">
+            <div class="fill-screen stellar-bg" style="background-image: url(img/title.jpg)" data-stellar-background-ratio="0.2"> <img id="title-logo" class="img-responsive grow" src="img/logo-title.png" alt="HANG LOOSErs logo" />
+                <div class="down-button">
+                    <a class="btn" href="#club"> <i class="fa fa-arrow-circle-down fa-4x"></i> </a>
+                </div>
+            </div>
+        </section>
 
-		<section id="club" class="row">
-			<h1>CLUB</h1>
-			<div class="col-md-6">
-				<p>Vor geraumer Zeit, genauer im Jahr 2008 traf sich immer wieder dieselbe „Flugverrückte“ Piloten-Fraktion aus der Region Thun, um ihr damals noch junges Fliegerleben mit neuen Eindrücken, den sogenannten „WOW-Effekten“, zu bereichern... Bei manchen Adventures wie Hike and Fly, SIK, Akro und XC-Flügen trafen wir immer wieder sehr sympathische Persönlichkeiten, die fortan auch mit uns durch die Luft zogen….so vereinten wir uns im lauen Sommer 2008 als „HANG LOOSErs“, der Anfang einer langen Episode… ;)</p>
-			</div>
-			<div id="club-desc" class="col-md-6 club-collapse">
-				<p>Die HANG LOOSErs sind ein Haufen Flugverrückter, die wann immer es die Möglichkeit bietet, mit dem Gleitschirm in der Luft unterwegs sind. Sind wir gerade mal nicht in der Luft, treffen wir uns zum gemütlichen beisammen sein beim „Stamm“ oder nehmen an einigen der zahlreichen Aktivitäten teil. Wir wollen so die Freundschaft zwischen Gleitschirmflieger/innen pflegen, Erfahrungen austauschen und gemeinsame Flüge unternehmen.</p>
-			</div>
-			<div style="text-align:right"><a id="read-more" class="visible-xs-block" data-toggle="collapse" data-target="#club-desc">Read more...</a></div>
-		</section>
+        <section id="club" class="row">
+            <h1>CLUB</h1>
+            <div class="col-md-6">
+                <p>Vor geraumer Zeit, genauer im Jahr 2008 traf sich immer wieder dieselbe „Flugverrückte“ Piloten-Fraktion aus der Region Thun, um ihr damals noch junges Fliegerleben mit neuen Eindrücken, den sogenannten „WOW-Effekten“, zu bereichern... Bei manchen Adventures wie Hike and Fly, SIK, Akro und XC-Flügen trafen wir immer wieder sehr sympathische Persönlichkeiten, die fortan auch mit uns durch die Luft zogen….so vereinten wir uns im lauen Sommer 2008 als „HANG LOOSErs“, der Anfang einer langen Episode… ;)</p>
+            </div>
+            <div id="club-desc" class="col-md-6 club-collapse">
+                <p>Die HANG LOOSErs sind ein Haufen Flugverrückter, die wann immer es die Möglichkeit bietet, mit dem Gleitschirm in der Luft unterwegs sind. Sind wir gerade mal nicht in der Luft, treffen wir uns zum gemütlichen beisammen sein beim „Stamm“ oder nehmen an einigen der zahlreichen Aktivitäten teil. Wir wollen so die Freundschaft zwischen Gleitschirmflieger/innen pflegen, Erfahrungen austauschen und gemeinsame Flüge unternehmen.</p>
+            </div>
+            <div style="text-align:right"><a id="read-more" class="visible-xs-block" data-toggle="collapse" data-target="#club-desc">Read more...</a></div>
+        </section>
 
-		<section class="row">
-			<div class="fill-screen fixed-attachment" data-src="img/title0.jpg" style="background-image: url(img/title0.jpg); background-position: right;" />
-		</section>
+        <section class="row">
+            <div class="fill-screen fixed-attachment" data-src="img/title0.jpg" style="background-image: url(img/title0.jpg); background-position: right;" />
+        </section>
 
-		<section id="vorstand" class="row">
-			<h1>VORSTAND</h1>
+        <section id="vorstand" class="row">
+            <h1>VORSTAND</h1>
 
-			<!-- only visible in layout lg -->
-			<div class="vorstand-lg-carousel-wrapper visible-lg-block">
-				<div id="vorstand-lg-carousel" class="vorstand">
-					<div class="president">
-						<img data-src="img/vorstand/img1.jpg" class="lazy img-responsive" />
-						<span>
+            <!-- only visible in layout lg -->
+            <div class="vorstand-lg-carousel-wrapper visible-lg-block">
+                <div id="vorstand-lg-carousel" class="vorstand">
+                    <div class="president">
+                        <img data-src="img/vorstand/img1.jpg" class="lazy img-responsive" />
+                        <span>
                             <h4 class="title"></h4>
                             <h6 class="name"></h6>
                             <h5 class="description"></h5>
                         </span>
-					</div>
-					<div class="vize">
-						<img data-src="img/vorstand/img2.jpg" class="lazy img-responsive" />
-						<span>
+                    </div>
+                    <div class="vize">
+                        <img data-src="img/vorstand/img2.jpg" class="lazy img-responsive" />
+                        <span>
                             <h4 class="title"></h4>
                             <h6 class="name"></h6>
                             <h5 class="description"></h5>
                         </span>
-					</div>
-					<div class="sportchef">
-						<img data-src="img/vorstand/img3.jpg" class="lazy img-responsive" />
-						<span>
+                    </div>
+                    <div class="sportchef">
+                        <img data-src="img/vorstand/img3.jpg" class="lazy img-responsive" />
+                        <span>
                             <h4 class="title"></h4>
                             <h6 class="name"></h6>
                             <h5 class="description"></h5>
                         </span>
-					</div>
-					<div class="sekretaer">
-						<img data-src="img/vorstand/img4.png" class="lazy img-responsive" />
-						<span>
+                    </div>
+                    <div class="sekretaer">
+                        <img data-src="img/vorstand/img4.png" class="lazy img-responsive" />
+                        <span>
                             <h4 class="title"></h4>
                             <h6 class="name"></h6>
                             <h5 class="description"></h5>
                         </span>
-					</div>
-					<div class="description">
-						<span>
+                    </div>
+                    <div class="description">
+                        <span>
                             <h5 class="description"></h5>
                         </span>
-					</div>
-					<div class="kassier">
-						<img data-src="img/vorstand/img5.jpg" class="lazy img-responsive" />
-						<span>
+                    </div>
+                    <div class="kassier">
+                        <img data-src="img/vorstand/img5.jpg" class="lazy img-responsive" />
+                        <span>
                             <h4 class="title"></h4>
                             <h6 class="name"></h6>
                             <h5 class="description"></h5>
                         </span>
-					</div>
-				</div>
-			</div>
+                    </div>
+                </div>
+            </div>
 
-			<!-- only visible in layout xs -->
-			<div id="vorstand-xs-carousel" class="vorstand visible-xs-block">
+            <!-- only visible in layout xs -->
+            <div id="vorstand-xs-carousel" class="vorstand visible-xs-block">
 
-				<div class="president">
-					<img data-src="img/vorstand/img1.jpg" class="lazy img-responsive" />
-					<span>
+                <div class="president">
+                    <img data-src="img/vorstand/img1.jpg" class="lazy img-responsive" />
+                    <span>
                         <h4 class="title"></h4>
                         <h6 class="name"></h6>
                         <h5 class="description"></h5>
                     </span>
-				</div>
-				<div class="vize">
-					<img data-src="img/vorstand/img2.jpg" class="lazy img-responsive" />
-					<span>
+                </div>
+                <div class="vize">
+                    <img data-src="img/vorstand/img2.jpg" class="lazy img-responsive" />
+                    <span>
                         <h4 class="title"></h4>
                         <h6 class="name"></h6>
                         <h5 class="description"></h5>
                         </span>
 
-				</div>
-				<div class="sportchef">
-					<img data-src="img/vorstand/img3.jpg" class="lazy img-responsive" />
-					<span>
+                </div>
+                <div class="sportchef">
+                    <img data-src="img/vorstand/img3.jpg" class="lazy img-responsive" />
+                    <span>
                         <h4 class="title"></h4>
                         <h6 class="name"></h6>
                         <h5 class="description"></h5>
                     </span>
-				</div>
-				<div class="sekretaer">
-					<img data-src="img/vorstand/img4.png" class="lazy img-responsive" />
-					<span>
+                </div>
+                <div class="sekretaer">
+                    <img data-src="img/vorstand/img4.png" class="lazy img-responsive" />
+                    <span>
                         <h4 class="title"></h4>
                         <h6 class="name"></h6>
                         <h5 class="description"></h5>
                      </span>
-				</div>
+                </div>
 
-				<div class="kassier">
-					<img data-src="img/vorstand/img5.jpg" class="lazy img-responsive" />
-					<span>
+                <div class="kassier">
+                    <img data-src="img/vorstand/img5.jpg" class="lazy img-responsive" />
+                    <span>
                         <h4 class="title"></h4>
                         <h6 class="name"></h6>
                         <h5 class="description"></h5>
                     </span>
-				</div>
-			</div>
+                </div>
+            </div>
 
-			<!-- only visible in layout sm and md -->
-			<div class="vorstand vorstand-sm-md-layout visible-sm-block visible-md-block">
-				<div class="row president">
-					<div class="col-sm-6">
-						<img data-src="img/vorstand/img1.jpg" class="lazy img-responsive" />
-					</div>
-					<div class="col-sm-6">
-						<span>
+            <!-- only visible in layout sm and md -->
+            <div class="vorstand vorstand-sm-md-layout visible-sm-block visible-md-block">
+                <div class="row president">
+                    <div class="col-sm-6">
+                        <img data-src="img/vorstand/img1.jpg" class="lazy img-responsive" />
+                    </div>
+                    <div class="col-sm-6">
+                        <span>
                             <h4 class="title"></h4>
                             <h6 class="name"></h6>
                             <h5 class="description"></h5>
                         </span>
-					</div>
-				</div>
-				<div class="row vize">
-					<div class="col-sm-6">
-						<img data-src="img/vorstand/img2.jpg" class="lazy img-responsive" />
-					</div>
-					<div class="col-sm-6">
-						<span>
+                    </div>
+                </div>
+                <div class="row vize">
+                    <div class="col-sm-6">
+                        <img data-src="img/vorstand/img2.jpg" class="lazy img-responsive" />
+                    </div>
+                    <div class="col-sm-6">
+                        <span>
                             <h4 class="title"></h4>
                             <h6 class="name"></h6>
                             <h5 class="description"></h5>
                         </span>
-					</div>
-				</div>
-				<div class="row sportchef">
-					<div class="col-sm-6">
-						<img data-src="img/vorstand/img3.jpg" class="lazy img-responsive" />
-					</div>
-					<div class="col-sm-6">
-						<span>
+                    </div>
+                </div>
+                <div class="row sportchef">
+                    <div class="col-sm-6">
+                        <img data-src="img/vorstand/img3.jpg" class="lazy img-responsive" />
+                    </div>
+                    <div class="col-sm-6">
+                        <span>
                             <h4 class="title"></h4>
                             <h6 class="name"></h6>
                             <h5 class="description"></h5>
                         </span>
-					</div>
-				</div>
-				<div class="row sekretaer">
-					<div class="col-sm-6">
-						<img data-src="img/vorstand/img4.png" class="lazy img-responsive" />
-					</div>
-					<div class="col-sm-6">
-						<span>
+                    </div>
+                </div>
+                <div class="row sekretaer">
+                    <div class="col-sm-6">
+                        <img data-src="img/vorstand/img4.png" class="lazy img-responsive" />
+                    </div>
+                    <div class="col-sm-6">
+                        <span>
                             <h4 class="title"></h4>
                             <h6 class="name"></h6>
                             <h5 class="description"></h5>
                         </span>
-					</div>
-				</div>
-				<div class="row kassier">
-					<div class="col-sm-6">
-						<img data-src="img/vorstand/img5.jpg" class="lazy img-responsive" />
-					</div>
-					<div class="col-sm-6">
-						<span>
+                    </div>
+                </div>
+                <div class="row kassier">
+                    <div class="col-sm-6">
+                        <img data-src="img/vorstand/img5.jpg" class="lazy img-responsive" />
+                    </div>
+                    <div class="col-sm-6">
+                        <span>
                             <h4 class="title"></h4>
                             <h6 class="name"></h6>
                             <h5 class="description"></h5>
                         </span>
-					</div>
-				</div>
-			</div>
-		</section>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-		<section class="row">
-			<div class="fill-screen fixed-attachment" style="background-image: url(img/title1.jpg);" />
-		</section>
+        <section class="row">
+            <div class="fill-screen fixed-attachment" style="background-image: url(img/title1.jpg);" />
+        </section>
 
-		<section id="events">
-			<h1>EVENTS</h1>
-			<div class="flag col-lg-3">
-				<img data-src="img/flags/skitag.jpg" class="lazy img-responsive" />
-				<div id="flipcountdownbox1" class="countdown"></div>
-				<h2>Skitag</h2>
-			</div>
-			<div class="flag col-lg-3">
-				<img data-src="img/flags/locarno.jpg" class="lazy img-responsive" />
-				<div id="flipcountdownbox2" class="countdown"></div>
-				<h2>Alpensüdseite Weekend</h2>
-			</div>
+        <section id="events">
+            <h1>EVENTS</h1>
+            <div class="flag col-lg-3">
+                <img data-src="img/flags/skitag.jpg" class="lazy img-responsive" />
+                <div id="flipcountdownbox1" class="countdown"></div>
+                <h2>Skitag</h2>
+            </div>
+            <div class="flag col-lg-3">
+                <img data-src="img/flags/locarno.jpg" class="lazy img-responsive" />
+                <div id="flipcountdownbox2" class="countdown"></div>
+                <h2>Alpensüdseite Weekend</h2>
+            </div>
 
-			<div class="col-lg-6">
-				<h3>Upcoming</h3>
-				<table id="upcoming-events" class="table table-hover">
-					<thead>
-						<tr>
-							<th>DATUM</th>
-							<th>EVENT</th>
-							<th>ORT</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr id="first-event">
-							<td class="event-date"></td>
-							<td class="event-name"></td>
-							<td class="event-location"></td>
-						</tr>
-						<tr id="second-event">
-							<td class="event-date"></td>
-							<td class="event-name"></td>
-							<td class="event-location"></td>
-						</tr>
-						<tr id="third-event">
-							<td class="event-date"></td>
-							<td class="event-name"></td>
-							<td class="event-location"></td>
-						</tr>
-						<tr id="fourth-event">
-							<td class="event-date"></td>
-							<td class="event-name"></td>
-							<td class="event-location"></td>
-						</tr>
-						<tr id="fifth-event">
-							<td class="event-date"></td>
-							<td class="event-name"></td>
-							<td class="event-location"></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="row"></div>
-			<div><a id="show-calendar" class="visible-xs-block" data-toggle="collapse" data-target="#year-calendar">Show calendar...</a></div>
-			<div id="year-calendar" class="calendar-collapse"></div>
-		</section>
+            <div class="col-lg-6">
+                <h3>Upcoming</h3>
+                <table id="upcoming-events" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>DATUM</th>
+                            <th>EVENT</th>
+                            <th>ORT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="first-event">
+                            <td class="event-date"></td>
+                            <td class="event-name"></td>
+                            <td class="event-location"></td>
+                        </tr>
+                        <tr id="second-event">
+                            <td class="event-date"></td>
+                            <td class="event-name"></td>
+                            <td class="event-location"></td>
+                        </tr>
+                        <tr id="third-event">
+                            <td class="event-date"></td>
+                            <td class="event-name"></td>
+                            <td class="event-location"></td>
+                        </tr>
+                        <tr id="fourth-event">
+                            <td class="event-date"></td>
+                            <td class="event-name"></td>
+                            <td class="event-location"></td>
+                        </tr>
+                        <tr id="fifth-event">
+                            <td class="event-date"></td>
+                            <td class="event-name"></td>
+                            <td class="event-location"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row"></div>
+            <div><a id="show-calendar" class="visible-xs-block" data-toggle="collapse" data-target="#year-calendar">Show calendar...</a></div>
+            <div id="year-calendar" class="calendar-collapse"></div>
+        </section>
 
-		<section class="row">
-			<div class="fill-screen fixed-attachment" style="background-image: url(img/title2.jpg)" />
-		</section>
+        <section class="row">
+            <div class="fill-screen fixed-attachment" style="background-image: url(img/title2.jpg)" />
+        </section>
 
-		<section id="fluege" class="row">
-			<h1>FLÜGE</h1>
-			<!--<div class="flights col-lg-10 col-lg-offset-1">
+        <section id="fluege" class="row">
+            <h1>FLÜGE</h1>
+            <!--<div class="flights col-lg-10 col-lg-offset-1">
 				<iframe data-src="http://www.xcontest.org/switzerland/en/ranking-pg-club:1668" class="lazy" style="border: 0; width:100%; min-height:500px;">
 				</iframe>
 			</div>
 			<img data-src="img/xcontest.gif" class="lazy img-responsive flights-xs" />
 			<a href="http://www.xcontest.org/switzerland/en/ranking-pg-club:1668" target="_blank" class="flights-xs">Show flights</a>-->
-		</section>
+        </section>
 
-		<section class="row">
-			<div class="fill-screen fixed-attachment" style="background-image: url(img/title5.jpg)" />
-		</section>
+        <section class="row">
+            <div class="fill-screen fixed-attachment" style="background-image: url(img/title5.jpg)" />
+        </section>
 
-		<section id="livetrack" class="row">
-			<h1>Livetrack</h1>
-			<!--<div class="livetrack col-lg-10 col-lg-offset-1">
+        <section id="livetrack" class="row">
+            <h1>Livetrack</h1>
+            <!--<div class="livetrack col-lg-10 col-lg-offset-1">
 				<iframe data-src="http://www.livetrack24.com/user/patricmegert/2d" class="lazy" style="border: 0; width:100%; min-height:500px;">
 				</iframe>
 			</div>
@@ -360,183 +496,182 @@
 				</div>
 			</div>-->
 
-		</section>
+        </section>
 
-		<section class="row">
-			<div class="fill-screen fixed-attachment" style="background-image: url(img/title6.jpg)" />
-		</section>
+        <section class="row">
+            <div class="fill-screen fixed-attachment" style="background-image: url(img/title6.jpg)" />
+        </section>
 
-		<section id="gallery" class="row">
-			<h1>GALLERY</h1>
-			<div id="gallery-wrapper" class="col-xs-10 col-md-8 col-lg-6 col-xs-offset-1 col-md-offset-2 col-lg-offset-3">
-				<div class="gallery-content">
-					<a href="img/gallery/img0.jpg" class="gallery-item"><img data-src="img/gallery/img0.jpg" class="lazy" /></a>
-					<a href="img/gallery/img1.jpg" class="gallery-item"><img data-src="img/gallery/img1.jpg" class="lazy" /></a>
-					<a href="img/gallery/img2.jpg" class="gallery-item"><img data-src="img/gallery/img2.jpg" class="lazy" /></a>
-					<a href="img/gallery/img3.jpg" class="gallery-item"><img data-src="img/gallery/img3.jpg" class="lazy" /></a>
-					<a href="img/gallery/img4.jpg" class="gallery-item"><img data-src="img/gallery/img4.jpg" class="lazy" /></a>
-					<a href="img/gallery/img5.jpg" class="gallery-item"><img data-src="img/gallery/img5.jpg" class="lazy" /></a>
-					<a href="img/gallery/img6.jpg" class="gallery-item"><img data-src="img/gallery/img6.jpg" class="lazy" /></a>
-					<a href="img/gallery/img7.jpg" class="gallery-item"><img data-src="img/gallery/img7.jpg" class="lazy" /></a>
-					<a href="img/gallery/img8.jpg" class="gallery-item"><img data-src="img/gallery/img8.jpg" class="lazy" /></a>
-					<a href="img/gallery/img9.jpg" class="gallery-item"><img data-src="img/gallery/img9.jpg" class="lazy" /></a>
-					<a href="img/gallery/img10.jpg" class="gallery-item"><img data-src="img/gallery/img10.jpg" class="lazy" /></a>
-					<a href="img/gallery/img11.jpg" class="gallery-item"><img data-src="img/gallery/img11.jpg" class="lazy" /></a>
-					<a href="img/gallery/img12.jpg" class="gallery-item"><img data-src="img/gallery/img12.jpg" class="lazy" /></a>
-					<a href="img/gallery/img13.jpg" class="gallery-item"><img data-src="img/gallery/img13.jpg" class="lazy" /></a>
-					<a href="img/gallery/img14.jpg" class="gallery-item"><img data-src="img/gallery/img14.jpg" class="lazy" /></a>
-					<a href="img/gallery/img15.jpg" class="gallery-item"><img data-src="img/gallery/img15.jpg" class="lazy" /></a>
-					<a href="img/gallery/img16.jpg" class="gallery-item"><img data-src="img/gallery/img16.jpg" class="lazy" /></a>
-					<a href="img/gallery/img17.jpg" class="gallery-item"><img data-src="img/gallery/img17.jpg" class="lazy" /></a>
-					<a href="img/gallery/img18.jpg" class="gallery-item"><img data-src="img/gallery/img18.jpg" class="lazy" /></a>
-					<a href="img/gallery/img19.jpg" class="gallery-item"><img data-src="img/gallery/img19.jpg" class="lazy" /></a>
-					<a href="img/gallery/img20.jpg" class="gallery-item"><img data-src="img/gallery/img20.jpg" class="lazy" /></a>
-					<a href="img/gallery/img21.jpg" class="gallery-item"><img data-src="img/gallery/img21.jpg" class="lazy" /></a>
-					<a href="img/gallery/img22.jpg" class="gallery-item"><img data-src="img/gallery/img22.jpg" class="lazy" /></a>
-					<a href="img/gallery/img23.jpg" class="gallery-item"><img data-src="img/gallery/img23.jpg" class="lazy" /></a>
-					<a href="img/gallery/img24.jpg" class="gallery-item"><img data-src="img/gallery/img24.jpg" class="lazy" /></a>
-					<a href="img/gallery/img25.jpg" class="gallery-item"><img data-src="img/gallery/img25.jpg" class="lazy" /></a>
-					<a href="img/gallery/img26.jpg" class="gallery-item"><img data-src="img/gallery/img26.jpg" class="lazy" /></a>
-					<a href="img/gallery/img27.jpg" class="gallery-item"><img data-src="img/gallery/img27.jpg" class="lazy" /></a>
-					<a href="img/gallery/img28.jpg" class="gallery-item"><img data-src="img/gallery/img28.jpg" class="lazy" /></a>
-					<a href="img/gallery/img29.jpg" class="gallery-item"><img data-src="img/gallery/img29.jpg" class="lazy" /></a>
-					<a href="img/gallery/img30.jpg" class="gallery-item"><img data-src="img/gallery/img30.jpg" class="lazy" /></a>
-					<a href="img/gallery/img31.jpg" class="gallery-item"><img data-src="img/gallery/img31.jpg" class="lazy" /></a>
-					<a href="img/gallery/img32.jpg" class="gallery-item"><img data-src="img/gallery/img32.jpg" class="lazy" /></a>
-					<a href="img/gallery/img33.jpg" class="gallery-item"><img data-src="img/gallery/img33.jpg" class="lazy" /></a>
-					<a href="img/gallery/img34.jpg" class="gallery-item"><img data-src="img/gallery/img34.jpg" class="lazy" /></a>
-				</div>
-			</div>
+        <section id="gallery" class="row">
+            <h1>GALLERY</h1>
+            <div id="gallery-wrapper" class="col-xs-10 col-md-8 col-lg-6 col-xs-offset-1 col-md-offset-2 col-lg-offset-3">
+                <div class="gallery-content">
+                    <a href="img/gallery/img0.jpg" class="gallery-item"><img data-src="img/gallery/img0.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img1.jpg" class="gallery-item"><img data-src="img/gallery/img1.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img2.jpg" class="gallery-item"><img data-src="img/gallery/img2.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img3.jpg" class="gallery-item"><img data-src="img/gallery/img3.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img4.jpg" class="gallery-item"><img data-src="img/gallery/img4.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img5.jpg" class="gallery-item"><img data-src="img/gallery/img5.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img6.jpg" class="gallery-item"><img data-src="img/gallery/img6.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img7.jpg" class="gallery-item"><img data-src="img/gallery/img7.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img8.jpg" class="gallery-item"><img data-src="img/gallery/img8.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img9.jpg" class="gallery-item"><img data-src="img/gallery/img9.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img10.jpg" class="gallery-item"><img data-src="img/gallery/img10.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img11.jpg" class="gallery-item"><img data-src="img/gallery/img11.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img12.jpg" class="gallery-item"><img data-src="img/gallery/img12.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img13.jpg" class="gallery-item"><img data-src="img/gallery/img13.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img14.jpg" class="gallery-item"><img data-src="img/gallery/img14.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img15.jpg" class="gallery-item"><img data-src="img/gallery/img15.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img16.jpg" class="gallery-item"><img data-src="img/gallery/img16.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img17.jpg" class="gallery-item"><img data-src="img/gallery/img17.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img18.jpg" class="gallery-item"><img data-src="img/gallery/img18.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img19.jpg" class="gallery-item"><img data-src="img/gallery/img19.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img20.jpg" class="gallery-item"><img data-src="img/gallery/img20.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img21.jpg" class="gallery-item"><img data-src="img/gallery/img21.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img22.jpg" class="gallery-item"><img data-src="img/gallery/img22.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img23.jpg" class="gallery-item"><img data-src="img/gallery/img23.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img24.jpg" class="gallery-item"><img data-src="img/gallery/img24.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img25.jpg" class="gallery-item"><img data-src="img/gallery/img25.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img26.jpg" class="gallery-item"><img data-src="img/gallery/img26.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img27.jpg" class="gallery-item"><img data-src="img/gallery/img27.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img28.jpg" class="gallery-item"><img data-src="img/gallery/img28.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img29.jpg" class="gallery-item"><img data-src="img/gallery/img29.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img30.jpg" class="gallery-item"><img data-src="img/gallery/img30.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img31.jpg" class="gallery-item"><img data-src="img/gallery/img31.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img32.jpg" class="gallery-item"><img data-src="img/gallery/img32.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img33.jpg" class="gallery-item"><img data-src="img/gallery/img33.jpg" class="lazy" /></a>
+                    <a href="img/gallery/img34.jpg" class="gallery-item"><img data-src="img/gallery/img34.jpg" class="lazy" /></a>
+                </div>
+            </div>
 
-			<div class="row"></div>
+            <div class="row"></div>
 
-			<div class="video">
-				<div class="embed-responsive embed-responsive-4by3">
-					<iframe class="lazy video" data-src="https://player.vimeo.com/video/165947612" style="width:400px; height: 300px" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-				</div>
-			</div>
+            <div class="video">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe class="lazy video" data-src="https://player.vimeo.com/video/165947612" style="width:400px; height: 300px" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+            </div>
 
 
-		</section>
+        </section>
 
-		<section class="row">
-			<div class="fill-screen fixed-attachment" style="background-image: url(img/title3.jpg); background-position: center;" />
-		</section>
+        <section class="row">
+            <div class="fill-screen fixed-attachment" style="background-image: url(img/title3.jpg); background-position: center;" />
+        </section>
 
-		<section id="contact-us">
-			<h1>CONTACT US</h1>
-			<div class="row">
-				<div class="col-sm-4 col-sm-push-4">
-					<div class="social-buttons">
-						<a class="btn" style="padding: 0px 0px; padding-bottom: 5px" data-toggle="modal" data-target="#emailModal"> <span class="fa fa-envelope fa-3x" aria-hidden="true"></span> </a>
-						<a class="btn btn-social-icon btn-facebook" target="_blank" href="https://www.facebook.com/hangloosers/"> <span class="fa fa-facebook"></span> </a>
-						<a class="btn btn-social-icon btn-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=LIVE%20ON%20TOUR&url=http%3A%2F%2Fwww.hangloosers.ch%2F&original_referer=http%3A%2F%2Fwww.hangloosers.ch%2F"> <span class="fa fa-twitter"></span> </a>
-						<a class="btn btn-social-icon btn-instagram" target="_blank" href="https://www.instagram.com/hangloosers/"> <span class="fa fa-instagram"></span> </a>
-					</div>
-				</div>
-				<div class="col-sm-4 col-sm-push-4">
-					<div class="fb-page" data-href="https://www.facebook.com/hangloosers/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
-						<blockquote cite="https://www.facebook.com/hangloosers/" class="fb-xfbml-parse-ignore"> <a href="https://www.facebook.com/hangloosers/">HANG LOOSErs</a> </blockquote>
-					</div>
-				</div>
-				<div class="col-sm-4 col-sm-pull-8">
-					<div class="we-want-you"> <img src="img/we-want-you.png" class="img-responsive" /> </div>
-				</div>
-			</div>
+        <section id="contact-us">
+            <h1>CONTACT US</h1>
+            <div class="row">
+                <div class="col-sm-4 col-sm-push-4">
+                    <div class="social-buttons">
+                        <a class="btn" style="padding: 0px 0px; padding-bottom: 5px" data-toggle="modal" data-target="#emailModal"> <span class="fa fa-envelope fa-3x" aria-hidden="true"></span> </a>
+                        <a class="btn btn-social-icon btn-facebook" target="_blank" href="https://www.facebook.com/hangloosers/"> <span class="fa fa-facebook"></span> </a>
+                        <a class="btn btn-social-icon btn-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=LIVE%20ON%20TOUR&url=http%3A%2F%2Fwww.hangloosers.ch%2F&original_referer=http%3A%2F%2Fwww.hangloosers.ch%2F"> <span class="fa fa-twitter"></span> </a>
+                        <a class="btn btn-social-icon btn-instagram" target="_blank" href="https://www.instagram.com/hangloosers/"> <span class="fa fa-instagram"></span> </a>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-push-4">
+                    <div class="fb-page" data-href="https://www.facebook.com/hangloosers/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+                        <blockquote cite="https://www.facebook.com/hangloosers/" class="fb-xfbml-parse-ignore"> <a href="https://www.facebook.com/hangloosers/">HANG LOOSErs</a> </blockquote>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-pull-8">
+                    <div class="we-want-you"> <img src="img/we-want-you.png" class="img-responsive" /> </div>
+                </div>
+            </div>
 
-			<!-- Modal -->
-			<div role="dialog" class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<!-- Modal Header -->
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">
-								<span aria-hidden="true">&times;</span>
-								<span class="sr-only">Close</span>
-							</button>
-							<h4 class="modal-title">
+            <!-- Modal -->
+            <div role="dialog" class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                                <span class="sr-only">Close</span>
+                            </button>
+                            <h4 class="modal-title">
 								Contact HANG LOOSErs
                 			</h4>
-						</div>
+                        </div>
 
-						<!-- Modal Body -->
+                        <!-- Modal Body -->
 
 
-						<div class="modal-body">
+                        <div class="modal-body">
 
-							<form id="contact-form" style="text-align: left" method="POST" action="https://www.enformed.io/bbkrah8x">
-								<input type="hidden" name="*subject" value="HANG LOOSErs Contact" />
-								<input type="hidden" name="*honeypot" />
-								<div class="class=form-group">
-									<label for="name">Name:</label>
-									<input id="name" name="name" class="form-control" type="text" maxlength="50" pattern=".+\s.+" placeholder="Enter first and last name" autofocus required />
-									<div class="invalid validation-messages">
-										<span data-rule="valueMissing" class="hide">Bitte geben Sie den Namen an.</span>
-										<span data-rule="patternMismatch" class="hide">Geben Sie Vor- und Nachname an.</span>
-									</div>
-								</div>
+                            <form id="contact-form" style="text-align: left" method="POST" action="https://www.enformed.io/bbkrah8x">
+                                <input type="hidden" name="*subject" value="HANG LOOSErs Contact" />
+                                <input type="hidden" name="*honeypot" />
+                                <div class="class=form-group">
+                                    <label for="name">Name:</label>
+                                    <input id="name" name="name" class="form-control" type="text" maxlength="50" pattern=".+\s.+" placeholder="Enter first and last name" autofocus required />
+                                    <div class="invalid validation-messages">
+                                        <span data-rule="valueMissing" class="hide">Bitte geben Sie den Namen an.</span>
+                                        <span data-rule="patternMismatch" class="hide">Geben Sie Vor- und Nachname an.</span>
+                                    </div>
+                                </div>
 
-								<div class="class=form-group">
-									<label for="email">Email:</label>
-									<input id="email" class="form-control" type="email" name="email" placeholder="Enter email" required/>
-									<div class="invalid validation-messages">
-										<span data-rule="valueMissing" class="hide">Bitte geben Sie eine Email an.</span>
-										<span data-rule="typeMismatch" class="hide">Keine gültige Email-Adresse.</span>
-									</div>
-								</div>
+                                <div class="class=form-group">
+                                    <label for="email">Email:</label>
+                                    <input id="email" class="form-control" type="email" name="email" placeholder="Enter email" required/>
+                                    <div class="invalid validation-messages">
+                                        <span data-rule="valueMissing" class="hide">Bitte geben Sie eine Email an.</span>
+                                        <span data-rule="typeMismatch" class="hide">Keine gültige Email-Adresse.</span>
+                                    </div>
+                                </div>
 
-								<div class="class=form-group">
-									<label for="message">Text:</label>
-									<textarea id="message" class="form-control" name="message" style="min-height: 150px" placeholder="Enter message" required>
-									</textarea>
-								</div>
+                                <div class="class=form-group">
+                                    <label for="message">Text:</label>
+                                    <textarea id="message" class="form-control" name="message" style="min-height: 150px" placeholder="Enter message" required>
+                                    </textarea>
+                                </div>
 
-								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-									<button id="submit" type="submit" class="btn btn-primary form-group">Send</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                    <button id="submit" type="submit" class="btn btn-primary form-group">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-		</section>
-	</div>
+        </section>
+    </div>
 
-	<footer class="container-fluid ">
-		<p>Copyright © 2017. All Rights Reserved by HLrs.</p>
-	</footer>
+    <footer class="container-fluid ">
+        <p>Copyright © 2017. All Rights Reserved by HLrs.</p>
+    </footer>
 
-	<!-- Scripts -->
-	<script src="node_modules/jquery-recliner/recliner.min.js"></script>
-	<script src="node_modules/bootstrap-year-calendar/js/bootstrap-year-calendar.min.js" type="text/javascript"></script>
-	<script src="js/libs/classie.js" type="text/javascript "></script>
-	<script src="js/libs/jquery.easing.1.3.min.js" type="text/javascript"></script>
-	<script src="js/libs/jquery.stellar.min.js" type="text/javascript"></script>
-	<script src="js/calendar.js" type="text/javascript"></script>
-	<script src="js/app.js" type="text/javascript"></script>
-	<script src="js/libs/cbpAnimatedHeader.js" type="text/javascript"></script>
-	<script src="node_modules/slick-carousel/slick/slick.min.js" type="text/javascript"></script>
-	<script src="node_modules/flipcountdown/jquery.flipcountdown.js" type="text/javascript"></script>
-	<script src="node_modules/magnific-popup/dist/jquery.magnific-popup.min.js" type="text/javascript"></script>
-	<script src="js/validation.js" type="text/javascript"></script>
-	<script>
-		(function (i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r;
-			i[r] = i[r] || function () {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date();
-			a = s.createElement(o)
-				, m = s.getElementsByTagName(o)[0];
-			a.async = 1;
-			a.src = g;
-			m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    <!-- Scripts -->
+    <script src="node_modules/jquery-recliner/recliner.min.js"></script>
+    <script src="node_modules/bootstrap-year-calendar/js/bootstrap-year-calendar.min.js" type="text/javascript"></script>
+    <script src="js/libs/classie.js" type="text/javascript "></script>
+    <script src="js/libs/jquery.easing.1.3.min.js" type="text/javascript"></script>
+    <script src="js/libs/jquery.stellar.min.js" type="text/javascript"></script>
+    <script src="js/calendar.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/libs/cbpAnimatedHeader.js" type="text/javascript"></script>
+    <script src="node_modules/slick-carousel/slick/slick.min.js" type="text/javascript"></script>
+    <script src="node_modules/flipcountdown/jquery.flipcountdown.js" type="text/javascript"></script>
+    <script src="node_modules/magnific-popup/dist/jquery.magnific-popup.min.js" type="text/javascript"></script>
+    <script src="js/validation.js" type="text/javascript"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-		ga('create', 'UA-86983200-1', 'auto');
-		ga('send', 'pageview');
-	</script>
+        ga('create', 'UA-86983200-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 </body>
 
