@@ -43,7 +43,9 @@ $(function () {
         dataType: "json",
         headers: {'Cache-Control': 'max-age=691200' }, // 8 days
         url: 'data/vorstand.json',
-        data: function (data) {
+        data: data
+    })
+        .done(function (data) {
             var $president = $('.president');
             $president.find('.title').html(data[0].function);
             $president.find('.name').html(data[0].name);
@@ -71,8 +73,7 @@ $(function () {
 
             var $description = $('.description');
             $description.find('.description').html(data[5].description);
-        }
-    });
+        });
 
 
     // set content of upcoming-events
