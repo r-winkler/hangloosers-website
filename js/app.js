@@ -42,8 +42,7 @@ $(function () {
     $.ajax({
         dataType: "json",
         headers: {'Cache-Control': 'max-age=691200' }, // 8 days
-        url: 'data/vorstand.json',
-        data: data
+        url: 'data/vorstand.json'
     })
         .done(function (data) {
             var $president = $('.president');
