@@ -76,3 +76,13 @@ No facebook album is integrated directly on the page. But if this should be done
 ```
 
 Replace data-href with the link of the desired facebook album.
+
+## Performance 
+
+* Pictures are lazy-loaded (recliner.js)
+* Cloudflare is used as nameserver which makes the website faster, safer and smarter
+* js scripts and css files are minimized (npm i -g minifiy)
+* Additional Js, CSS and HTML files are minimized by cloudflare
+* Browser Caching is provided by cloudflare and set to 8 days
+
+
