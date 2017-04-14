@@ -70,7 +70,7 @@ $(function () {
 	});
 
 	// set content of upcoming-events
-/*	$.getJSON('data/events.json', function (data) {
+	$.getJSON('data/events.json', function (data) {
 		var events = [];
 		$.each(data, function (key, val) {
 			events.push(val);
@@ -111,7 +111,7 @@ $(function () {
 		$fifth_event.find('.event-location').html(events[4].location);
 		$fifth_event.find('.event-date').html(events[4].startDate);
 
-	});*/
+	});
 
 	// set text bold of active nav item
 	$("#navbar-main").on("activate.bs.scrollspy", function () {
