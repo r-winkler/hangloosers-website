@@ -85,5 +85,6 @@ Replace data-href with the link of the desired facebook album.
 * Additional Js, CSS and HTML files are minimized by cloudflare
 * Browser Caching is provided by cloudflare and set to 8 days (additional page rule is configured to cache everything)
 * loadCss is used to load CSS script asynchronously
+* critical css had no effect on this page and so it is removed again (was generated with https://jonassebastianohlsson.com/criticalpathcssgenerator/)
 
 
