@@ -34,6 +34,14 @@ $(function () {
     printable: true,    // be printer friendly and show all elements on document print
     live: true          // auto bind lazy loading to ajax loaded elements
 });
+    
+    $(".flights").show(function(){
+    // Find the iframes within our newly-visible element
+    $(this).find("iframe").prop("src", function(){
+        // Set their src attribute to the value of data-src
+        return $(this).data("src");
+    });
+});
 
 	// load year calendar from separate file
 	$('#year-calendar').load('calendar.html');
