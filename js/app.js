@@ -32,7 +32,7 @@ $(function () {
         // do nothing
     } else {
         // load iframes for xcontest and livetrack
-        $(".flights").show(function () {
+        $(".flights, .livetrack").show(function () {
             // Find the iframes within our newly-visible element
             $(this).find("iframe").prop("src", function () {
                 // Set their src attribute to the value of data-src
