@@ -87,5 +87,6 @@ Replace data-href with the link of the desired facebook album.
 * loadCss is used to load CSS script asynchronously
 * critical css had no effect on this page and so it is removed again (was generated with https://jonassebastianohlsson.com/criticalpathcssgenerator/)
 * images were compressed via google page speed
+* iframes for xcontest and livetrack are not loaded in small layout
 
 
