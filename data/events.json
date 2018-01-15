@@ -2,15 +2,152 @@
 {
 		"name": "Club-Fliegen"
 		, "location": "Lenk"
-		, "startDate": "28.01.2017"
-		, "endDate": "29.01.2017"
+		, "startDate": "28.01.2018"
+		, "endDate": "29.01.2018"
      },
 	{
 		"name": "Skitag"
 		, "location": "BEO"
-		, "startDate": "10.02.2017"
-		, "endDate": "10.02.2017"
+		, "startDate": "10.02.2018"
+		, "endDate": "10.02.2018"
      },
-
+	 {
+		"name": "Südalpen-Weeky"
+		, "location": "Ivrea"
+		, "startDate": "22.02.2018"
+		, "endDate": "25.02.2018"
+     },
+	 {
+		"name": "Stamm"
+		, "location": "Playoff"
+		, "startDate": "08.03.2018"
+		, "endDate": "08.03.2018"
+     },
+	 {
+		"name": "Club-Fliegen"
+		, "location": "je nach Wetter"
+		, "startDate": "10.03.2018"
+		, "endDate": "11.03.2018"
+     },
+	 {
+		"name": "GV"
+		, "location": "Playoff"
+		, "startDate": "23.03.2018"
+		, "endDate": "23.03.2018"
+     },
+	 {
+		"name": "Stamm"
+		, "location": "Playoff"
+		, "startDate": "05.04.2018"
+		, "endDate": "05.04.2018"
+     },
+	 {
+		"name": "Club-Fliegen"
+		, "location": "je nach Wetter"
+		, "startDate": "07.04.2018"
+		, "endDate": "08.04.2018"
+     },
+	 {
+		"name": "Stamm"
+		, "location": "Playoff"
+		, "startDate": "03.05.2018"
+		, "endDate": "03.05.2018"
+     },
+	 {
+		"name": "Club-Fliegen"
+		, "location": "je nach Wetter"
+		, "startDate": "05.05.2018"
+		, "endDate": "06.05.2018"
+     },
+	 {
+		"name": "Stamm"
+		, "location": "Playoff"
+		, "startDate": "31.05.2018"
+		, "endDate": "31.05.2018"
+     },
+	 {
+		"name": "Club-Fliegen"
+		, "location": "je nach Wetter"
+		, "startDate": "02.06.2018"
+		, "endDate": "03.06.2018"
+     },
+	 {
+		"name": "Stamm"
+		, "location": "Playoff"
+		, "startDate": "28.06.2018"
+		, "endDate": "28.06.2018"
+     },
+	 {
+		"name": "Club-Fliegen"
+		, "location": "je nach Wetter"
+		, "startDate": "30.06.2018"
+		, "endDate": "01.07.2018"
+     },
+	 {
+		"name": "Stamm"
+		, "location": "Playoff"
+		, "startDate": "19.07.2018"
+		, "endDate": "19.07.2018"
+     },
+	 {
+		"name": "Dune du Pyla"
+		, "location": "Frankreich"
+		, "startDate": "21.07.2018"
+		, "endDate": "29.07.2018"
+     },
+	 {
+		"name": "SIK"
+		, "location": "Axalp"
+		, "startDate": "11.08.2018"
+		, "endDate": "12.08.2018"
+     },
+	 {
+		"name": "Stamm"
+		, "location": "Playoff"
+		, "startDate": "30.08.2018"
+		, "endDate": "30.08.2018"
+     },
+	 {
+		"name": "Club-Fliegen"
+		, "location": "je nach Wetter"
+		, "startDate": "01.09.2018"
+		, "endDate": "02.09.2018"
+     },
+	 {
+		"name": "Hike & Fly"
+		, "location": "je nach Wetter"
+		, "startDate": "15.09.2018"
+		, "endDate": "16.09.2018"
+     },
+	 {
+		"name": "Hike & Fly"
+		, "location": "je nach Wetter"
+		, "startDate": "22.09.2018"
+		, "endDate": "23.09.2018"
+     },
+	 {
+		"name": "Stamm"
+		, "location": "Playoff"
+		, "startDate": "11.10.2018"
+		, "endDate": "11.10.2018"
+     },
+	 {
+		"name": "Bir Billing"
+		, "location": "Indien"
+		, "startDate": "13.10.2018"
+		, "endDate": "28.10.2018"
+     },
+	 {
+		"name": "Europapark"
+		, "location": "Rust"
+		, "startDate": "03.11.2018"
+		, "endDate": "03.11.2018"
+     },
+	 {
+		"name": "Hlrs Challenge"
+		, "location": "to be defined"
+		, "startDate": "08.12.2018"
+		, "endDate": "08.12.2018"
+     }
 
 ]
