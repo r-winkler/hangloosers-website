@@ -1,5 +1,11 @@
 [
 {
+		"name": "Stamm"
+		, "location": "Playoff"
+		, "startDate": "19.01.2018"
+		, "endDate": "19.01.2018"
+     },
+{
 		"name": "Club-Fliegen"
 		, "location": "Lenk"
 		, "startDate": "28.01.2018"
